@@ -30,6 +30,7 @@
   "homepage": "https://github.com/WideSpreadX/SpreadDash#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "chalk": "^3.0.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",

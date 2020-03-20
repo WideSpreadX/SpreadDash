@@ -1,6 +1,6 @@
 # SpreadDash
 
-##User Dashboard for WideSpread
+## User Dashboard for WideSpread
 
 ### SocketIO
 
@@ -20,7 +20,7 @@
 - Connects with FlexFloor
 - Connects to Autio
 
-NEED:
+# NEED:
 
 Entertainment API's
 Reading API's

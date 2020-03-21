@@ -44,6 +44,6 @@
 
 # NEED:
 
-Entertainment API's
-Reading API's
-Learning API's
+- Entertainment API's
+- Reading API's
+- Learning API's

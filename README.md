@@ -43,7 +43,9 @@
 - time
 
 # NEED:
-
+- COVID-19 Known Location API --- PRIORITY!
+- ONLY 100% Confirmed Information for news - we guarantee our news - no one elses.
+- Show help locations on ar-spread
 - Entertainment API's
 - Reading API's
 - Learning API's

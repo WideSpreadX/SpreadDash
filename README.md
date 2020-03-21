@@ -2,6 +2,12 @@
 
 ## User Dashboard for WideSpread
 
+
+### PassportJS
+
+- oAuth 
+
+
 ### SocketIO
 
 - Video Conferencing
@@ -19,6 +25,19 @@
 - Customizable 
 - Connects with FlexFloor
 - Connects to Autio
+
+## MongoDB
+
+### MongooseJS
+
+### Schemas
+
+- user
+- thing
+- place
+- ai
+- sphere
+- currentSphere
 
 # NEED:
 

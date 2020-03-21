@@ -38,6 +38,9 @@
 - ai
 - sphere
 - currentSphere
+- verse
+- map
+- time
 
 # NEED:
 

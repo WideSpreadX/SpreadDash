@@ -4,6 +4,7 @@ const { ensureAuthenticated } = require("../config/auth");
 const chalk = require("chalk");
 const log = console.log;
 const user = require("./users");
+const COVIDmarker = require("../models/COVID");
 const Message = require("../models/Message");
 
 // Welcome Page
@@ -62,7 +63,27 @@ router.get("/socialspread", ensureAuthenticated, (req, res) => {
 router.get("/covid-ar", ensureAuthenticated, (req, res) => {
   res.render("covid-ar")
 });
+router.post("/covid-ar", ensureAuthenticated, (req, res) => {
+  const {confirmed, lat, lng, threat_level, site_contamination_date, last_updated, placed_by} = req.body;
+  let errors = [];
 
+  const newCOVIDMarker = new COVIDmarker({
+      confirmed,
+      lat,
+      lng,
+      threat_level,
+      site_contamination_date,
+      last_updated,
+      placed_by
+  });
+
+  newCOVIDMarker.save();
+  res.redirect("/covid-ar/map");
+
+});
+router.get("/covid-ar/map", ensureAuthenticated, (req, res) => {
+  res.render("covid-map");
+});
 // Events
 router.get("/event", ensureAuthenticated, (req, res) => {
   res.render("event")

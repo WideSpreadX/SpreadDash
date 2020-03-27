@@ -1,1 +1,55 @@
 <h1>COVID-AR</h1>
+<h2>Add a new COVID-19 location you want your family and friends to steer clear of.</h2>
+<form action="/covid-ar" method="POST">
+    <p>Please enter the cooridinates of the COVID Caution Zone below.</p>
+    <label for="confirmed">Is this a confirmed case?</label>
+    <input type="checkbox" id="confirmed" name="confirmed" value="true">
+    <div class="form-group">
+      <input
+        type="lat"
+        id="lat"
+        name="lat"
+        class="form-control"
+        placeholder="Enter Latitude (e.g. 41.123456)"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="lng"
+        id="lng"
+        name="lng"
+        class="form-control"
+        placeholder="Enter Longitude (e.g. -71.654321)"
+      />
+    </div>
+    <label for="threat_level">Threat Level: </label>
+    <select id="threat_level" name="threat_level">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><br>
+    <label for="site_contamination_date">Initial Date of Contamination:</label>
+    <input type="text" id="site_contamination_date" name="site_contamination_date" placeholder="MM/DD/YYYY">
+    <!--      
+        <input type="radio" id="threat1" name="threat_level" value="1">
+        <label for="threat1">1</label><br>
+       
+        <input type="radio" id="threat2" name="threat_level" value="2">
+        <label for="threat2">2</label><br>
+       
+        <input type="radio" id="threat3" name="threat_level" value="3">
+        <label for="threat3">3</label><br>
+       
+        <input type="radio" id="threat4" name="threat_level" value="4">
+        <label for="threat4">4</label><br>
+       
+        <input type="radio" id="threat5" name="threat_level" value="5">
+        <label for="threat5">5</label><br>
+
+       -->
+       <label for="confirmed">Is this a confirmed case?</label>
+       <input type="checkbox" id="confirmed" name="confirmed" value="true">
+    <button type="submit" class="btn btn-primary btn-block">Add Marker</button>
+  </form>

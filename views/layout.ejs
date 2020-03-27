@@ -10,6 +10,142 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../public/style/style.css">
+    <style>
+      html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+      body {
+        background: black;
+        color: white;
+      }
+      .zone-portal {
+        background-image: linear-gradient(to top right, rgba(54, 52, 52, 0.452), rgba(71, 69, 64, 0.548), rgba(75, 71, 71, 0.295), rgba(84, 119, 143, 0.212), rgba(66, 118, 230, 0.384), transparent);
+        padding: 5px;
+        font-size: 24px;
+        border: groove 2px white;
+        border-radius: 8px;
+      }
+      .floor-one {
+        width: 100%;
+        height: 50px;
+        color: white;
+      }
+      .floor-two {
+        width: 100%;
+        height: 50px;
+        color: white;
+      }
+      .floor-one li {
+        padding-top: 5px;
+        width: 25%;
+        float: left;
+        list-style: none;
+        height: 50px;
+        cursor: pointer;
+      }
+      .floor-two li {
+        padding-top: 5px;
+        list-style: none;
+        width: 25%;
+        float: left;
+        height: 50px;
+        cursor: pointer;
+      }
+      .floor-one, .floor-two {
+        text-align: center;
+      }
+      /* Bottom Spread Menu */
+      .bottom-spread-menu {
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%; 
+      }
+      .bottom-spread-menu li {
+        width: 25%;
+        float: left;
+        text-align: center;
+      }
+      .bottom-spread-menu a {
+        width: 25%;
+        float: left;
+      }
+      /* SpreadBar */
+      .spread-bar {
+        background: rgba(255, 255, 255, 0.315);
+        width: 100%;
+        height: 50px;
+      }
+      .search {
+        padding-top: 5px;
+        width: 75%;
+        float: left;
+      }
+      .search input {
+        height: 38px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        margin-left: 10px;
+        width: 80%;
+      }
+      .search button {
+        height: 38px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        width: 15%;
+      }
+      #user_inventory {
+        width: 10%;
+        background: lime;
+        float: left;
+      }
+      .spreadspace {
+        width: 25%;
+        float: right;
+        text-align: center;
+      }
+      .spreadspace a {
+        color: white;
+      }
+      .spreadspace a:hover {
+
+        text-decoration: none;
+      }
+    
+      .bottom-spread-menu li {
+        text-align: center;
+        list-style: none;
+        width: 25%;
+      }
+      .bottom-spread-menu li a {
+        width: 100%;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div class="container">

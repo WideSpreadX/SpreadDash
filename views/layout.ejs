@@ -49,6 +49,14 @@ footer, header, hgroup, menu, nav, section {
         text-align: center;
         padding-bottom: 20px;
       }
+      button {
+        border-radius: 8px;
+        padding: 4px;
+        border: solid 1px rgb(147, 161, 163);
+        box-shadow: 0 0 2px white;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
       .zone-portal {
         background-image: linear-gradient(to top right, rgba(54, 52, 52, 0.452), rgba(71, 69, 64, 0.548), rgba(75, 71, 71, 0.295), rgba(84, 119, 143, 0.212), rgba(66, 118, 230, 0.384), transparent);
         padding: 5px;
@@ -251,6 +259,27 @@ footer, header, hgroup, menu, nav, section {
        #noteBody {
          width: 100%;
        }
+       #noteDisplay {
+         border-bottom-left-radius: 6px;
+         border-bottom-right-radius: 6px;
+         background: rgb(97, 97, 99);
+         margin-bottom: 10px;
+       }
+       #noteDisplay h4 {
+         font-size: 24px;
+         border-bottom: solid 1px #555;
+         text-align: center;
+         font-weight: bolder;
+       }
+       #noteDisplay h5 {
+        text-align: right;
+        font-size: 12px;
+         border-bottom: solid 1px #555;
+         background: #333;
+         color: white;
+         box-shadow: 0 0 3px black;
+
+       }
        #read {
          width: 100%;
        }
@@ -262,6 +291,15 @@ footer, header, hgroup, menu, nav, section {
          background: black;
          border: none;
          outline: none;
+         box-shadow: none;
+         border: none;
+         cursor: pointer;
+         height: 1px;
+         width: 1px;
+       }
+       #btnDelete {
+         background: red;
+         color: white;
        }
     </style>
   </head>
@@ -423,7 +461,7 @@ function displayNote(note) {
         JSON.parse(localStorage.getItem('noteData'));
 
     let out = "<h4>" + noteArray[note].title + "</h4>";
-    out += "<h5>Date:" + new Date(noteArray[note].date).toDateString() + "</h5>";
+    out += "<h5>" + new Date(noteArray[note].date).toDateString() + "</h5>";
     out += "<p>" + noteArray[note].body + "</p>";
     out += "<button id='btnDelete'>Delete</button> "
 

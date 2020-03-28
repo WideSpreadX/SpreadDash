@@ -8,11 +8,19 @@ const UserSchema = new mongoose.Schema({
 
   email: {
     type: String,
-    required: true
+    unique: true,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
   },
   password: {
     type: String,
-    required: true
+    trim: true,
+    required: "Password is Required",
+    validate: [
+      function(input) {
+        return input.length >= 6;
+      },
+      "Password should be longer."
+    ]
   },
   date: {
     type: Date,
@@ -93,6 +101,10 @@ const UserSchema = new mongoose.Schema({
         law_enforcement: Boolean
       }
     }
+  },
+  user_created: {
+    type: Date,
+    default: Date.now
   }
 });
 

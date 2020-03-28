@@ -3,6 +3,7 @@ const router = express.Router();
 const { ensureAuthenticated } = require("../config/auth");
 const chalk = require("chalk");
 const log = console.log;
+var logger = require("morgan");
 const user = require("./users");
 const COVIDmarker = require("../models/COVID");
 const Message = require("../models/Message");

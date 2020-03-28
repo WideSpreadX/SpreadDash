@@ -10,4 +10,4 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 app.get('/covid-markers', function (req, res, next) {
   console.log(req.body)
   res.json(req.body)
-})
+});

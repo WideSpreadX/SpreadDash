@@ -222,6 +222,47 @@ footer, header, hgroup, menu, nav, section {
         z-index: 0;
         margin-top: 20px;
       }
+
+      /* 
+      
+      ACADEMY
+      
+       */
+
+       #backpack {
+         width: 200px;
+       }
+       #backpack h3 {
+         color: yellow;
+         font-size: 24px;
+         padding-left: 5px;
+       }
+       .backpack-tool-item {
+         margin-top: 10px;
+         border-top: groove 2px white;
+         border-bottom: groove 2px white;
+       }
+       #write {
+         width: 100%;
+       }
+       .note-body {
+         width: 100%;
+       }
+       #noteBody {
+         width: 100%;
+       }
+       #read {
+         width: 100%;
+       }
+       #noteMaster {
+         width: 100%;
+       }
+       #btnWrite {
+         color: black;
+         background: black;
+         border: none;
+         outline: none;
+       }
     </style>
   </head>
   <body>
@@ -283,6 +324,144 @@ var locations = [
 <!-- Replace following script src -->
 <script src="/maps/documentation/javascript/examples/markerclusterer/markerclustererplus@4.0.1.min.js">
 </script>
+
+<!-- Code Editor -->
+<script>
+  const first = document.querySelector(".first");
+const iframe = document.querySelector("iframe");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+    var html = first.textContent;
+    iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+});
+
+
+first.addEventListener('keyup', () => {
+    var html = first.textContent;
+    iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+});
+
+first.addEventListener("paste", function (e) {
+    e.preventDefault();
+    var text = e.clipboardData.getData("text/plain");
+    document.execCommand("insertText", false, text);
+});
+
+
+</script>
+<script>
+  const showAddResourceForm = document.querySelector("#append-resource");
+const input = document.querySelector("input");
+const textarea = document.querySelector("button");
+
+showAddResourceForm.addEventListener("click", () => {
+
+})
+</script>
+
+<script>
+  function Note(date, title, body) {
+    this.date = date;
+    this.title = title;
+    this.body = body;
+}
+</script>
+<script>
+  const btnSave =
+    document.getElementById('btnSave');
+let notes = "";
+init();
+
+function init() {
+    let out = "";
+    let noteArray =
+        JSON.parse(localStorage.getItem('noteData'));
+    if (noteArray != null && noteArray != "") {
+        noteArray =
+            JSON.parse(localStorage.getItem('noteData'));
+        for (let x = 0; x < noteArray.length; x++) {
+            out += "<option value=" + x + ">";
+            out += noteArray[x].title;
+            out += "</option>";
+
+            document.getElementById('noteMaster').innerHTML = out;
+        }
+
+        document.getElementById('btnWrite').addEventListener('click', function (e) {
+            writeNote();
+        });
+        document.getElementById('noteMaster').addEventListener('click', function (e) {
+            displayNote(e.target.value);
+        });
+
+        readNotes();
+    } else {
+        writeNote();
+    }
+}
+function writeNote() {
+    document.getElementById('read').style.display = "none";
+
+    document.getElementById('write').style.display = "block";
+
+    document.getElementById('noteTitle').value = "";
+
+    document.getElementById('noteBody').value = "";
+
+}
+
+function readNotes() {
+    document.getElementById('read').style.display = "block";
+
+    document.getElementById('write').style.display = "block";
+
+}
+
+function displayNote(note) {
+    let noteArray =
+        JSON.parse(localStorage.getItem('noteData'));
+
+    let out = "<h4>" + noteArray[note].title + "</h4>";
+    out += "<h5>Date:" + new Date(noteArray[note].date).toDateString() + "</h5>";
+    out += "<p>" + noteArray[note].body + "</p>";
+    out += "<button id='btnDelete'>Delete</button> "
+
+    document.getElementById('noteDisplay').innerHTML = out;
+
+    document.getElementById('btnDelete').onclick = function () {
+        noteArray.splice(note, 1);
+        localStorage.setItem('noteData', JSON.stringify(noteArray));
+        init();
+    }
+};
+
+btnSave.onclick = function () {
+    const noteDate = new Date();
+    const noteTitle = document.getElementById('noteTitle').value;
+    const noteBody = document.getElementById('noteBody').value;
+    const theNote = new Note(noteDate, noteTitle, noteBody);
+    saveNotes(theNote);
+}
+
+function saveNotes(note) {
+    let noteArray = JSON.parse(localStorage.getItem('noteData'));
+    if (noteArray == null) {
+        noteArray = new Array();
+        noteArray.push(note);
+    } else {
+        noteArray.push(note);
+    }
+    localStorage.setItem('noteData', JSON.stringify(noteArray));
+    readNotes();
+    init();
+}
+</script>
+
+
+
+
+<!-- OTHER  -->
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ42MPk0Ua5QMFU_YLM1X_yoF6LVKTpPw&callback=initMap">
 </script>

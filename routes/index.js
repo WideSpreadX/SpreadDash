@@ -32,8 +32,12 @@ router.get("/help", ensureAuthenticated, (req, res) => {
 router.get("/academy", ensureAuthenticated, (req, res) => {
   res.render("academy")
 });
+// Academy - Programming
+router.get("/programming", ensureAuthenticated, (req, res) => {
+  res.render("programming")
+});
 
-// 
+// Business
 router.get("/business", ensureAuthenticated, (req, res) => {
   res.render("business")
 });

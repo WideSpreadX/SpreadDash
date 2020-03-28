@@ -110,4 +110,9 @@ router.get("/spreadspace", ensureAuthenticated, (req, res) => {
   res.render("spreadspace")
 });
 
+// Messaging
+router.get("/messaging", ensureAuthenticated, (req, res) => {
+  res.render("messaging")
+});
+
 module.exports = router;

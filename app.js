@@ -3,6 +3,7 @@ const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
+const bodyParser = require('body-parser');
 
 const app = express();
 // Passport Config
@@ -32,9 +33,15 @@ app.use(
   })
 );
 
-// Passport Middleware
+// Middleware
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static("public"));
+app.use(express.json());
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
 
 // Routes
 

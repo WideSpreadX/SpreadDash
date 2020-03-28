@@ -26,8 +26,11 @@
 </div>
 
 <!-- SpreadMenu - NEED PARTIAL -->
+<div class="covid-header">
 
-<h1>COVID-AR</h1>
+  <h1>Add COVID-19 Confirmed Location</h1>
+</div>
+
 <h2>Add a new COVID-19 location you want your family and friends to steer clear of.</h2>
 <form action="/covid-ar" method="POST">
     <p>Please enter the cooridinates of the COVID Caution Zone below.</p>
@@ -82,3 +85,8 @@
        <input type="checkbox" id="confirmed" name="confirmed" value="true">
     <button type="submit" class="btn btn-primary btn-block">Add Marker</button>
   </form>
+
+
+  <div class="covid-map">
+    <div id="map"></div>
+  </div>

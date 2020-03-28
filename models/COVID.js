@@ -2,8 +2,17 @@ const mongoose = require("mongoose");
 
 const COVIDmarkerSchema = new mongoose.Schema({
     confirmed: Boolean,
-    lat: Number,
-    lng: Number,
+    location: {
+        type: {
+          type: String,
+          enum: ['Point'],
+          required: true
+        },
+        coordinates: {
+          type: [Number],
+          required: true
+        }
+      },
     threat_level: Number,
     site_contamination_date: Date,
     last_updated: Date,

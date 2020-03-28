@@ -6,6 +6,12 @@ const log = console.log;
 const user = require("./users");
 const COVIDmarker = require("../models/COVID");
 const Message = require("../models/Message");
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 // Welcome Page
 router.get("/", (req, res) => res.render("welcome"));
@@ -83,9 +89,12 @@ router.post("/covid-ar", ensureAuthenticated, (req, res) => {
 });
 router.get("/covid-ar/map", ensureAuthenticated, (req, res) => {
   res.render("covid-map");
-
- 
 });
+
+app.get('/covid-ar', function (req, res, next) {
+  console.log(req.body)
+  res.json(req.body)
+})
 // Events
 router.get("/event", ensureAuthenticated, (req, res) => {
   res.render("event")

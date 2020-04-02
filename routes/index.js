@@ -46,6 +46,48 @@ router.get("/programming", ensureAuthenticated, (req, res) => {
   res.render("programming")
 });
 
+// Academy - Programming - HTML
+router.get("/html", ensureAuthenticated, (req, res) => {
+  res.render("html")
+});
+// Academy - Programming - CSS
+router.get("/css", ensureAuthenticated, (req, res) => {
+  res.render("css")
+});
+// Academy - Programming - JS
+router.get("/javascript", ensureAuthenticated, (req, res) => {
+  res.render("javascript")
+});
+// Academy - Programming - SQL
+router.get("/sql", ensureAuthenticated, (req, res) => {
+  res.render("sql")
+});
+// Academy - Programming - AJAX
+router.get("/ajax", ensureAuthenticated, (req, res) => {
+  res.render("ajax")
+});
+// Academy - Programming - JSON
+router.get("/json", ensureAuthenticated, (req, res) => {
+  res.render("json")
+});
+// Academy - Programming - MongoDB
+router.get("/mongodb", ensureAuthenticated, (req, res) => {
+  res.render("mongodb")
+});
+// Academy - Programming - API Libraries
+router.get("/api-libraries", ensureAuthenticated, (req, res) => {
+  res.render("api-libraries")
+});
+// Academy - Programming - C#
+router.get("/c-sharp", ensureAuthenticated, (req, res) => {
+  res.render("c-sharp")
+});
+// Academy - Programming - C++
+router.get("/cpp", ensureAuthenticated, (req, res) => {
+  res.render("cpp")
+});
+
+
 // Academy - Math
 router.get("/math", ensureAuthenticated, (req, res) => {
   res.render("math")

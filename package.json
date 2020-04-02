@@ -29,8 +29,10 @@
   },
   "homepage": "https://github.com/WideSpreadX/SpreadDash#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "chalk": "^3.0.0",
+    "cheerio": "^1.0.0-rc.3",
     "ejs": "^3.0.1",
     "ejs-lint": "^1.0.1",
     "express": "^4.17.1",

@@ -3,13 +3,20 @@ const router = express.Router();
 const { ensureAuthenticated } = require("../config/auth");
 const chalk = require("chalk");
 const log = console.log;
+const mongoose = require("mongoose");
+const axios = require("axios");
+const cheerio = require("cheerio");
 var logger = require("morgan");
 const user = require("./users");
 
 
 const COVIDmarker = require("../models/COVID");
 const Message = require("../models/Message");
+const Article = require("../models/Article");
+const Note = require("../models/Note");
 const bodyParser = require('body-parser');
+// DB Config
+const db = require("../config/keys").MongoURI;
 const app = express();
 require("./apiRoutes")(app);
 require("./academyRoutes")(app);
@@ -201,6 +208,7 @@ router.get("/event", ensureAuthenticated, (req, res) => {
 // News
 router.get("/news", ensureAuthenticated, (req, res) => {
   res.render("news")
+  
 });
 
 // SpreadSpace

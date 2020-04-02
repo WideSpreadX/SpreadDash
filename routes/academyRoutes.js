@@ -1,8 +1,6 @@
-// ===============================================================================
-// LOAD DATA
-// We are linking our routes to a series of "data" sources.
-// These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
+const express = require("express");
+const router = express.Router();
+
 
 var classData = require("../data/classData");
 var waitListData = require("../data/waitinglistData");
@@ -13,6 +11,7 @@ var waitListData = require("../data/waitinglistData");
 // ===============================================================================
 
 module.exports = function(app) {
+ 
   // academy GET Requests
   // Below code handles when users "visit" a page.
   // In each of the below cases when a user visits a link
@@ -20,7 +19,7 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
 
-    router.get("/classes", ensureAuthenticated, (req, res) => {
+    router.get("/classes",  (req, res) => {
         res.render("classes");
         
         res.json(classData);
@@ -30,19 +29,19 @@ module.exports = function(app) {
       });
 
 
-  app.get("/academy/waitlist", function(req, res) {
+  router.get("/academy/waitlist", function(req, res) {
     res.json(waitListData);
   });
 
   // academy POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
   // In each of the below cases, when a user submits form data (a JSON object)
-  // ...the JSON is pushed to the appropriate JavaScript array
+  // ...the JSON is pushed to the routerropriate JavaScript array
   // (ex. User fills out a reservation request... this data is then sent to the server...
   // Then the server saves the data to the classData array)
   // ---------------------------------------------------------------------------
 
-  app.post("/academy/classes", function(req, res) {
+  router.post("/academy/classes", function(req, res) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body parsing middleware
@@ -60,7 +59,7 @@ module.exports = function(app) {
   // I added this below code so you could clear out the table while working with the functionality.
   // Don"t worry about it!
 
-  app.post("/academy/clear", function(req, res) {
+  router.post("/academy/clear", function(req, res) {
     // Empty out the arrays of data
     classData.length = 0;
     waitListData.length = 0;

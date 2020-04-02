@@ -12,6 +12,7 @@ const Message = require("../models/Message");
 const bodyParser = require('body-parser');
 const app = express();
 require("./apiRoutes")(app);
+require("./academyRoutes")(app);
 
 
 app.use(bodyParser.json());

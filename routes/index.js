@@ -5,10 +5,14 @@ const chalk = require("chalk");
 const log = console.log;
 var logger = require("morgan");
 const user = require("./users");
+
+
 const COVIDmarker = require("../models/COVID");
 const Message = require("../models/Message");
 const bodyParser = require('body-parser');
 const app = express();
+require("./apiRoutes")(app);
+
 
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +24,9 @@ router.get("/", (req, res) => res.render("welcome"));
 // Dashboard Page
 router.get("/dashboard", ensureAuthenticated, (req, res) => {
   res.render("dashboard");
+
+
+
   log(chalk.blue("Hello world!"));
 });
 
@@ -38,14 +45,56 @@ router.get("/programming", ensureAuthenticated, (req, res) => {
   res.render("programming")
 });
 
+// Academy - Math
+router.get("/math", ensureAuthenticated, (req, res) => {
+  res.render("math")
+});
+// Academy - Math - Numbers
+router.get("/numbers", ensureAuthenticated, (req, res) => {
+  res.render("numbers")
+});
+// Academy - Math - Addition
+router.get("/addition", ensureAuthenticated, (req, res) => {
+  res.render("addition")
+});
+// Academy - Math - Subtraction
+router.get("/subtraction", ensureAuthenticated, (req, res) => {
+  res.render("subtraction")
+});
+// Academy - Math - Multiplication
+router.get("/multiplication", ensureAuthenticated, (req, res) => {
+  res.render("multiplication")
+});
+// Academy - Math - Division
+router.get("/division", ensureAuthenticated, (req, res) => {
+  res.render("division")
+});
+
+// Academy - Science
+router.get("/science", ensureAuthenticated, (req, res) => {
+  res.render("science")
+});
+
+// Academy - History
+router.get("/history", ensureAuthenticated, (req, res) => {
+  res.render("history")
+});
+
+// Academy - Art
+router.get("/art", ensureAuthenticated, (req, res) => {
+  res.render("art")
+});
+
 // Business
 router.get("/business", ensureAuthenticated, (req, res) => {
   res.render("business")
 });
+
 // Shopping
 router.get("/shopping", ensureAuthenticated, (req, res) => {
   res.render("shopping")
 });
+
 // Leisure
 router.get("/leisure", ensureAuthenticated, (req, res) => {
   res.render("leisure")
@@ -99,7 +148,8 @@ router.get("/covid-ar/map", ensureAuthenticated, (req, res) => {
 app.get('/covid-ar', function (req, res, next) {
   console.log(req.body)
   res.json(req.body)
-})
+});
+
 // Events
 router.get("/event", ensureAuthenticated, (req, res) => {
   res.render("event")

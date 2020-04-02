@@ -1,9 +1,10 @@
 const express = require("express");
+const path = require('path');
+const ejsLint = require('ejs-lint');
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
-const bodyParser = require('body-parser');
 
 const app = express();
 // Passport Config
@@ -47,7 +48,8 @@ if (process.env.NODE_ENV === "production") {
 
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
-
+app.use("/academy", require("./routes/academyRoutes"));
+app.use("/api", require("./routes/apiRoutes"));
 // Port
 const PORT = process.env.PORT || 5000;
 

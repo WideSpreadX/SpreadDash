@@ -44,12 +44,16 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 
+
+
 // Routes
 
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
 /* app.use("/academy", require("./routes/academyRoutes")); */
 app.use("/api", require("./routes/apiRoutes"));
+
+
 // Port
 const PORT = process.env.PORT || 5000;
 

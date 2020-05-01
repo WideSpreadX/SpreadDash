@@ -17,7 +17,12 @@ const Note = require("../models/Note");
 const bodyParser = require('body-parser');
 // DB Config
 const db = require("../config/keys").MongoURI;
-const app = express();
+/* const app = express(); */
+const app = require('express')();
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
+const messagePort = process.env.PORT || 3000;
+
 require("./apiRoutes")(app);
 require("./academyRoutes")(app);
 
@@ -44,6 +49,14 @@ router.get("/help", ensureAuthenticated, (req, res) => {
   log(chalk.red("Hello Help!"));
 });
 
+// SpreadShield
+router.get("/spreadshield", ensureAuthenticated, (req, res) => {
+  res.render("spreadshield")
+});
+// SpreadShield Contol
+router.get("/spreadshield-control", ensureAuthenticated, (req, res) => {
+  res.render("spreadshield-control")
+});
 // Academy
 router.get("/academy", ensureAuthenticated, (req, res) => {
   res.render("academy")
@@ -217,8 +230,17 @@ router.get("/spreadspace", ensureAuthenticated, (req, res) => {
 });
 
 // Messaging
-router.get("/messaging", ensureAuthenticated, (req, res) => {
-  res.render("messaging")
+router.get('/messages', function(req, res){
+  res.render("messages");
+  
+  io.on('connection', function(socket){
+    socket.on('chat message', function(msg){
+      io.emit('chat message', msg);
+    });
+  });
+  
 });
-
+  http.listen(messagePort, function(){
+    console.log('listening on *:' + messagePort);
+  });
 module.exports = router;

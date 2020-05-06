@@ -76,11 +76,73 @@
     </div>
 </div>
 <div class="backpack-tool-item">
- <h3>Lists</h3>   
+ <h3>Lists</h3> 
+ <div class="lists-catagories">
+
+   <ul>
+     <li>Personal</li>
+     <li>Academy</li>
+     <li>Business</li>
+    </ul>
+  </div>
+ <div class="lists">
+   <form action="/newTodo" method="POST">
+      <div class="input-group">
+        <input type="text" placeholder="Add new item"><span><button type="submit">Add</button></span>
+      </div>
+   </form>
+ </div>  
 </div>
 <div class="backpack-tool-item">
 <h3>Calculator</h3>
-  <%- include partials/calculator  %>
+<table class="calculator">
+  <tr>
+    <td><button></button></td>
+    <td><button>Rad</button></td>
+    <td><button>v-</button></td>
+    <td><button>C</button></td>
+    <td><button>()</button></td>
+    <td><button>%</button></td>
+    <td><button>./.</button></td>
+</tr>
+  <tr>
+    <td><button>sin</button></td>
+    <td><button>cos</button></td>
+    <td><button>tan</button></td>
+    <td><button class="number-button">7</button></td>
+    <td><button class="number-button">8</button></td>
+    <td><button class="number-button">9</button></td>
+    <td><button>X</button></td>
+</tr>
+  <tr>
+    <td><button>ln</button></td>
+    <td><button>log</button></td>
+    <td><button>1/x</button></td>
+    <td><button class="number-button">4</button></td>
+    <td><button class="number-button">5</button></td>
+    <td><button class="number-button">6</button></td>
+    <td><button>-</button></td>
+</tr>
+  <tr>
+    <td><button>e^x</button></td>
+    <td><button>x^2</button></td>
+    <td><button>x^y</button></td>
+    <td><button class="number-button">1</button></td>
+    <td><button class="number-button">2</button></td>
+    <td><button class="number-button">3</button></td>
+    <td><button>+</button></td>
+</tr>
+  <tr>
+    <td><button>|x|</button></td>
+    <td><button>pi</button></td>
+    <td><button>e</button></td>
+    <td><button>+/-</button></td>
+    <td><button class="number-button">0</button></td>
+    <td><button>.</button></td>
+    <td><button>=</button></td>
+</tr>
+</table>
+
 </div>
 <div class="backpack-tool-item">
 <h3>References</h3>

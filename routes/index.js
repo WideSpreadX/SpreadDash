@@ -20,8 +20,7 @@ const db = require("../config/keys").MongoURI;
 /* const app = express(); */
 const app = require('express')();
 const http = require('http').createServer(app);
-const io = require('socket.io')(http);
-const messagePort = process.env.PORT || 3000;
+
 
 require("./apiRoutes")(app);
 require("./academyRoutes")(app);
@@ -229,18 +228,5 @@ router.get("/spreadspace", ensureAuthenticated, (req, res) => {
   res.render("spreadspace")
 });
 
-// Messaging
-router.get('/messages', function(req, res){
-  res.render("messages");
-  
-  io.on('connection', function(socket){
-    socket.on('chat message', function(msg){
-      io.emit('chat message', msg);
-    });
-  });
-  
-});
-  http.listen(messagePort, function(){
-    console.log('listening on *:' + messagePort);
-  });
+
 module.exports = router;

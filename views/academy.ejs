@@ -36,13 +36,13 @@
 <br>
 <br>
 <div class="academy-subject-menu">
-
+<h1><a href="/academy/classes">Classes</a></h1>
   <ul>
-    <li><a href="/programming">Computer Programming</a></li>
-    <li><a href="/math">Math</a></li>
-    <li><a href="/science">Science</a></li>
-    <li><a href="/history">History</a></li>
-    <li><a href="/art">Art</a></li>
+    <li><a href="/academy/programming">Computer Programming</a></li>
+    <li><a href="/academy/math">Math</a></li>
+    <li><a href="/academy/science">Science</a></li>
+    <li><a href="/academy/history">History</a></li>
+    <li><a href="/academy/art">Art</a></li>
   </ul>
 </div>
 
@@ -95,51 +95,59 @@
 </div>
 <div class="backpack-tool-item">
 <h3>Calculator</h3>
+<canvas id="calc-graphics"></canvas>
 <table class="calculator">
   <tr>
-    <td><button></button></td>
+    <form id="calcForm">
+
+      <input type="text" name="calc-screen" id="calcScreen">
+    </form>
+
+  </tr>
+  <tr>
+    <td><button>&hArr;</button></td>
     <td><button>Rad</button></td>
-    <td><button>v-</button></td>
-    <td><button>C</button></td>
+    <td><button id="sqrt" onclick="sqrtClicked()">&#8730</button></td>
+    <td><button id="clear" onclick="clearClicked()">C</button></td>
     <td><button>()</button></td>
     <td><button>%</button></td>
-    <td><button>./.</button></td>
+    <td><button id="divide" class="operator-button" onclick="calcForm.calcScreen.value += ' &#247 '" value="&#247" name="divide">&#247</button></td>
 </tr>
   <tr>
-    <td><button>sin</button></td>
-    <td><button>cos</button></td>
-    <td><button>tan</button></td>
-    <td><button class="number-button">7</button></td>
-    <td><button class="number-button">8</button></td>
-    <td><button class="number-button">9</button></td>
-    <td><button>X</button></td>
+    <td><button id="sin" class="trig-button" onclick="sinClicked()">sin</button></td>
+    <td><button id="cos" class="trig-button" onclick="cosClicked()">cos</button></td>
+    <td><button id="tan" class="trig-button" onclick="tanClicked()">tan</button></td>
+    <td><button id="seven" onclick="calcForm.calcScreen.value += '7'" value="7" name="seven" class="number-button">7</button></td>
+    <td><button id="eight" onclick="calcForm.calcScreen.value += '8'" value="8" name="eight" class="number-button">8</button></td>
+    <td><button id="nine" onclick="calcForm.calcScreen.value += '9'" value="9" name="nine" class="number-button">9</button></td>
+    <td><button id="times" class="operator-button" onclick="calcForm.calcScreen.value += ' x '" value="X" name="times">X</button></td>
 </tr>
   <tr>
-    <td><button>ln</button></td>
-    <td><button>log</button></td>
+    <td><button class="trig-button">ln</button></td>
+    <td><button class="trig-button">log</button></td>
     <td><button>1/x</button></td>
-    <td><button class="number-button">4</button></td>
-    <td><button class="number-button">5</button></td>
-    <td><button class="number-button">6</button></td>
-    <td><button>-</button></td>
+    <td><button id="four" onclick="calcForm.calcScreen.value += '4'" value="4" name="four" class="number-button">4</button></td>
+    <td><button id="five" onclick="calcForm.calcScreen.value += '5'" value="5" name="five" class="number-button">5</button></td>
+    <td><button id="six" onclick="calcForm.calcScreen.value += '6'" value="6" name="six" class="number-button">6</button></td>
+    <td><button id="minus" class="operator-button" onclick="calcForm.calcScreen.value += ' - '" value="-" name="minus">-</button></td>
 </tr>
   <tr>
     <td><button>e<sup>x</sup></button></td>
-    <td><button>x<sup>2</sup></button></td>
+    <td><button id="exSquared" onclick="exSquaredClicked()">x<sup>2</sup></button></td>
     <td><button>x<sup>y</sup></button></td>
-    <td><button class="number-button">1</button></td>
-    <td><button class="number-button">2</button></td>
-    <td><button class="number-button">3</button></td>
-    <td><button>+</button></td>
+    <td><button id="one" onclick="calcForm.calcScreen.value += '1'" value="1" name="one" class="number-button">1</button></td>
+    <td><button id="two" onclick="calcForm.calcScreen.value += '2'" value="2" name="two" class="number-button">2</button></td>
+    <td><button id="three" onclick="calcForm.calcScreen.value += '3'" value="3" name="three" class="number-button">3</button></td>
+    <td><button id="plus" class="operator-button" onclick="calcForm.calcScreen.value += ' + '" value="+" name="plus">+</button></td>
 </tr>
   <tr>
     <td><button>|x|</button></td>
-    <td><button>pi</button></td>
+    <td><button id="pi" onclick="piClicked()">&#960</button></td>
     <td><button>e</button></td>
-    <td><button>+/-</button></td>
-    <td><button class="number-button">0</button></td>
-    <td><button>.</button></td>
-    <td><button>=</button></td>
+    <td><button id="abs" onclick="absClicked()">+/-</button></td>
+    <td><button id="zero" onclick="calcForm.calcScreen.value += '0'" value="0" name="zero" class="number-button">0</button></td>
+    <td><button id="decimal">.</button></td>
+    <td><button id="equals" class="equals" value="=" onclick="calcForm.calcScreen.value = eval(calcForm.calcScreen.value)">=</button></td>
 </tr>
 </table>
 
@@ -173,3 +181,49 @@
     <li>Volunteer Tutors</li>
   </ul>
 </div>
+<script>
+  const clear = document.getElementById('clear');
+  const sin = document.getElementById('sin');
+  const cos = document.getElementById('cos');
+  const tan = document.getElementById('tan');
+  const one = document.getElementById('one');
+  const two = document.getElementById('two');
+  const three = document.getElementById('three');
+  const four = document.getElementById('four');
+  const five = document.getElementById('five');
+  const six = document.getElementById('six');
+  const seven = document.getElementById('seven');
+  const eight = document.getElementById('eight');
+  const nine = document.getElementById('nine');
+  const zero = document.getElementById('zero');
+  const decimal = document.getElementById('decimal');
+  const pi = document.getElementById('pi');
+  const exSquared = document.getElementById('exSquared');
+  const abs = document.getElementById('abs');
+
+
+  function clearClicked() {
+    calcScreen.value="";
+  }
+  function sinClicked() {
+    calcForm.calcScreen.value=Math.sin(calcForm.calcScreen.value);
+  }
+  function cosClicked() {
+    calcForm.calcScreen.value=Math.cos(calcForm.calcScreen.value);
+  }
+  function tanClicked() {
+    calcForm.calcScreen.value=Math.tan(calcForm.calcScreen.value);
+  }
+  function piClicked() {
+    calcForm.calcScreen.value=Math.PI(calcForm.calcScreen.value);
+  }
+  function exSquaredClicked() {
+    calcForm.calcScreen.value=Math.pow(calcForm.calcScreen.value, 2);
+  }
+  function sqrtClicked() {
+    calcForm.calcScreen.value=Math.sqrt(calcForm.calcScreen.value);
+  }
+  function absClicked() {
+    calcForm.calcScreen.value=Math.abs(calcForm.calcScreen.value);
+  }
+</script>

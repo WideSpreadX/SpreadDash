@@ -3,17 +3,19 @@ const router = express.Router();
 const { ensureAuthenticated } = require("../config/auth");
 const chalk = require("chalk");
 const log = console.log;
-const mongoose = require("mongoose");
+/* const mongoose = require("mongoose");
 const axios = require("axios");
 const cheerio = require("cheerio");
 var logger = require("morgan");
+const classes = require("./classes"); */
+
+
 const user = require("./users");
-
-
 const COVIDmarker = require("../models/COVID");
 const Message = require("../models/Message");
 const Article = require("../models/Article");
 const Note = require("../models/Note");
+const Classes = require("../models/Class");
 const bodyParser = require('body-parser');
 // DB Config
 const db = require("../config/keys").MongoURI;
@@ -41,6 +43,14 @@ router.get("/dashboard", ensureAuthenticated, (req, res) => {
 
   log(chalk.blue("Hello world!"));
 });
+// Music Page
+router.get("/music", ensureAuthenticated, (req, res) => {
+  res.render("music");
+
+
+
+  log(chalk.blue("Hello world!"));
+});
 
 // Help Page
 router.get("/help", ensureAuthenticated, (req, res) => {
@@ -61,7 +71,7 @@ router.get("/academy", ensureAuthenticated, (req, res) => {
   res.render("academy")
 });
 // Academy - Programming
-router.get("/programming", ensureAuthenticated, (req, res) => {
+router.get("/academy/programming", ensureAuthenticated, (req, res) => {
   res.render("programming")
 });
 
@@ -106,10 +116,78 @@ router.get("/cpp", ensureAuthenticated, (req, res) => {
   res.render("cpp")
 });
 
+router.get('/academy/classes', ensureAuthenticated, (req, res) => {
+  res.render('classes');
+});
 
+router.get('/academy/register-class', ensureAuthenticated, (req, res) => {
+  res.render('register-class');
+});
+router.post('/academy/register-class', (req, res) => {
+  const { name, subject, skill_level, lessons, cert_name, teacher, teacher_aide } = req.body;
+    let errors = [];
+  
+    // Check required fields
+    if (!name || !subject || !skill_level || !lessons || !cert_name || !teacher || !teacher_aide ) {
+      errors.push({ msg: "Please fill in all fields" });
+    }
+
+
+    if (errors.length > 0) {
+      res.render("register-class", {
+        errors,
+        name,
+        subject,
+        skill_level,
+        lessons,
+        cert_name,
+        teacher,
+        teacher_aide
+      });
+    } else {
+      // Validation Pass
+      Classes.findOne({ name: name }).then(classes => {
+        if (classes) {
+          // User Exists
+          errors.push({ msg: "This is already a registered class" });
+          res.render("register-class", {
+            errors,
+            name,
+            subject,
+            skill_level,
+            lessons,
+            cert_name,
+            teacher,
+            teacher_aide
+          });
+        } else {
+          const newClass = new Classes({
+            name,
+            subject,
+            skill_level,
+            lessons,
+            cert_name,
+            teacher,
+            teacher_aide
+          });
+
+          newClass.save();
+          res.redirect("/academy/classes");
+        }
+    });
+  }
+});
 // Academy - Math
-router.get("/math", ensureAuthenticated, (req, res) => {
+router.get("/academy/math", ensureAuthenticated, (req, res) => {
   res.render("math")
+});
+// Academy - Math - Trigonometry
+router.get("/academy/math/trigonometry", ensureAuthenticated, (req, res) => {
+  res.render("trigonometry")
+});
+// Academy - Math - Trigonometry
+router.get("/academy/math/trigonometry/sin-cos-tan", ensureAuthenticated, (req, res) => {
+  res.render("sin-cos-tan")
 });
 // Academy - Math - Numbers
 router.get("/numbers", ensureAuthenticated, (req, res) => {
@@ -131,19 +209,23 @@ router.get("/multiplication", ensureAuthenticated, (req, res) => {
 router.get("/division", ensureAuthenticated, (req, res) => {
   res.render("division")
 });
+// Academy - Math - Algebra
+router.get("/algebra", ensureAuthenticated, (req, res) => {
+  res.render("algebra")
+});
 
 // Academy - Science
-router.get("/science", ensureAuthenticated, (req, res) => {
+router.get("/academy/science", ensureAuthenticated, (req, res) => {
   res.render("science")
 });
 
 // Academy - History
-router.get("/history", ensureAuthenticated, (req, res) => {
+router.get("/academy/history", ensureAuthenticated, (req, res) => {
   res.render("history")
 });
 
 // Academy - Art
-router.get("/art", ensureAuthenticated, (req, res) => {
+router.get("/academy/art", ensureAuthenticated, (req, res) => {
   res.render("art")
 });
 

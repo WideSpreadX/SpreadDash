@@ -89,8 +89,38 @@ font-family: 'Bilbo Swash Caps', cursive;
         padding-bottom: 80px;
       }
 
+      #div1 {
+        border: solid 2px white;
+        width: 300px;
+        height: 30vh;
+        border-radius: 10px;
+        position: fixed;
+        bottom: 20px;
+        left: 45%;
 
-
+      }
+      #drag1, #drag2, #drag3 {
+        cursor: grab;
+      }
+      #drag1 {
+        padding: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: solid 1px green;
+        box-shadow: inset 0 0 10px lime, 0 0 6px lightskyblue;
+      }
+      #drag1 img {
+        opacity: 0.8;
+      }
+      #lyricsList {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        width: 200px;
+        height: 40vh;
+        background: magenta;
+      }
       /* Button  */
       button {
         border-radius: 8px;
@@ -244,8 +274,127 @@ font-family: 'Bilbo Swash Caps', cursive;
   border-radius: 18px;
 }
 
+/* 
+
+        Music
+
+ */
 
 
+#musicStreamContainer {
+  width: 100vw;
+  height: 130px;
+  padding-top: 10px;
+  border-top: groove 5px grey;
+  border-bottom: groove 5px grey;
+  float: none;
+  background: rgba(4, 126, 163, 0.411);
+}
+#musicCollections {
+  width: 5%;
+  float: left;
+  height: 100px;
+}
+#musicCollections li {
+  list-style: none;
+}
+#currentPlaylist {
+  background: rgba(27, 199, 241, 0.644);
+  width: 20%;
+  height: 100px;
+  float: left;
+  overflow-y: scroll;
+  border-top: groove 3px grey;
+  border-bottom: groove 3px grey;
+}
+#currentPlaylist li {
+  list-style: none;
+  padding: 3px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+#currentPlaylist li:hover {
+  background: white;
+  color: rgb(19, 75, 128);
+}
+audio {
+  padding: 10px;
+  height: 100px;
+  width: 50%;
+  float: left;
+  outline: none;
+}
+
+#top-menu {
+  width: 100%;
+  height: 40px;
+}
+#top-menu li {
+  width: 33%;
+  float: left;
+  text-align: center;
+  list-style: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+#currentController {
+  width: 14%;
+  height: 100px;
+  float: left;
+}
+
+#mainControls {
+  float: none;
+  cursor: pointer;
+}
+.prev {
+  float: left;
+  width: 33%;
+  text-align: center;
+  font-size: 18px;
+  padding: 3px;
+  border: solid 2px lightskyblue;
+  box-shadow: inset 0 0 6px white, inset 0 0 3px lightskyblue, 0 0 4px white, 0 0 2px lightskyblue;
+  border-radius: 8px;
+  text-shadow: 0 0 2px white;
+
+}
+.prev:hover {
+  background: white;
+  color: black;
+}
+.play {
+  float: left;
+  width: 33%;
+  text-align: center;
+  font-size: 18px;
+  padding: 3px;
+  border: solid 2px lightskyblue;
+  box-shadow: inset 0 0 6px white, inset 0 0 3px lightskyblue, 0 0 4px white, 0 0 2px lightskyblue;
+  border-radius: 8px;
+  text-shadow: 0 0 2px white;
+
+}
+.play:hover {
+  background: white;
+  color: black;
+}
+.next {
+  float: left;
+  width: 33%;
+  text-align: center;
+  font-size: 18px;
+  padding: 3px;
+  border: solid 2px lightskyblue;
+  box-shadow: inset 0 0 6px white, inset 0 0 3px lightskyblue, 0 0 4px white, 0 0 2px lightskyblue;
+  border-radius: 8px;
+  text-shadow: 0 0 2px white;
+
+}
+.next:hover {
+  background: white;
+  color: black;
+}
       /* COVID-19 */
       .covid-header {
         width: 100%;
@@ -447,11 +596,12 @@ font-family: 'Bilbo Swash Caps', cursive;
 
 
 .first {
-    background: #fff;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    max-height: 50vw;
+    background: rgba(255, 255, 255, 0.418);
+    width: 45vw;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 70vh;
+    max-height: 90vh;
     white-space: pre;
     box-shadow: 0 1px 1px rgb(22, 22, 22);
     outline: none;
@@ -459,36 +609,83 @@ font-family: 'Bilbo Swash Caps', cursive;
     color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: inset 0 0 10px #fff, 0 0 5px #fff;
     transition: all .7s ease-out;
     transition-timing-function: ease-in-out;
     border-radius: 10px;
     border: solid 1px white;
     box-shadow: 0 0 10px white, inset 0 0 5px #000;
-    margin-top: 20px;
+    position: absolute;
+    left: 10vw;
+    bottom: 3vh;
 }
 
 .second {
-    background-color: rgb(255, 255, 255);
-    overflow-y: auto;
+    background-color: rgba(177, 246, 248, 0.781);
+    overflow-y: scroll;
+    overflow-x: scroll;
     white-space: pre;
     box-shadow: 0 0 10px rgb(255, 255, 255), inset 0 0 10px black;
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
+    width: 40vw;
+    height: 70vh;
+    position: fixed;
+    right: 20px;
+    bottom: 3vh;
+    color: white;
 }
 .editor-button {
   width: 100%;
   padding-top: 5px;
 }
 #code_btn {
-  margin-left: 25%;
-  width: 50%;
-  background: blue;
+  margin-left: 35%;
+  width: 30%;
+  height: 50px;
+  
+  line-height: 40px;
+  background: rgba(39, 120, 226, 0.603);
+  box-shadow: inset 0 0 20px white, inset 0 0 12px lightskyblue, 0 0 10px white, 0 0 4px lightskyblue;
   color: lightskyblue;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-shadow: 0 0 2px white, 0 0 1px lightskyblue;
+  font-size: 32px;
+}
+#code_btn:hover {
+  background: white;
+}
+#code_btn button {
 
+}
+/* Code Editor File Explorer */
+
+.code-editor-file-explorer-container {
+  background: rgba(32, 32, 32, 0.493);
+  width: 8vw;
+  height: 70vh;
+  position: fixed;
+  left: -10px;
+  bottom: 3vh;
+  border: groove 2px lightskyblue;
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 20px;
+  padding-left: 15px;
+  box-shadow: inset 0 0 6px white, inset 0 0 3px lightskyblue, 0 0 5px white, 0 0 2px lightskyblue;
+}
+.code-editor-file-explorer-container li {
+  padding: 4px;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: ease-in 0.32s;
+}
+.code-editor-file-explorer-container li:hover {
+  color:rgb(39, 167, 184);
+  transition: ease-in 0.5s;
 }
 #rightMenu {
 }
@@ -526,13 +723,54 @@ font-family: 'Bilbo Swash Caps', cursive;
   height: 50px;
   float: left;
 }
+/* Subject Index */
+.subject-index {
+  background: #777;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+}
+.subject-index li {
+  list-style:circle;
+  margin-left: 10px;
+}
+.subject-index li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.subject-index li a:hover {
+  color: lightskyblue;
+}
+
+
+#calc-graphics {
+  width: 200px;
+  height: 150px;
+  background: white;
+  border-radius: 5px;
+  cursor: crosshair;
+}
+#calcScreen {
+  background: #ccc;
+  outline: none;
+  border-radius: 5px;
+  border: solid 1px white;
+  font-size: 22px;
+  width: 200px;
+  padding: 5px;
+}
 
 
 .calculator td {
   width: 30px;
 }
 .calculator button {
-  width: 100%;
+  width: 95%;
+  border: none;
+  line-height: 25px;
+  outline: none;
 }
 .calculator button:hover {
   background: black;
@@ -543,6 +781,20 @@ font-family: 'Bilbo Swash Caps', cursive;
   text-align: center;
   width: 25px;
 }
+.trig-button {
+  background: steelblue;
+}
+.equals{
+  background: crimson;
+}
+.equals:hover {
+  background: white;
+  color: crimson;
+}
+.operator-button {
+  background: #777;
+}
+
 .lists {
   background: black;
 }
@@ -563,6 +815,23 @@ font-family: 'Bilbo Swash Caps', cursive;
 .lists-catagories li:hover {
   color: lightskyblue;
 }
+.academy-image {
+  text-align: center;
+  padding: 20px;
+}
+.academy-image img {
+  border-radius: 10px;
+  box-shadow: 0 0 15px white, 0 0 10px lightskyblue;
+}
+.class-subject-card {
+  width: 300px;
+  height: 400px;
+  background: #777;
+  border-radius: 10px;
+}
+.class-subject-card-header {
+  border-bottom: solid 2px lightskyblue;
+}
     </style>
   </head>
   <body>
@@ -572,80 +841,29 @@ font-family: 'Bilbo Swash Caps', cursive;
       <%- body %>
     </div>
 
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-   
-    <script>
-      $(function () {
-        var socket = io();
-        $('form').submit(function(){
-          socket.emit('chat message', $('#m').val());
-          $('#m').val('');
-          return false;
-        });
-        socket.on('chat message', function(msg){
-          $('#messages').append($('<li>').text(msg));
-          window.scrollTo(0, document.body.scrollHeight);
-        });
-      });
-    </script>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: new google.maps.LatLng(42.3737591, -71.116534),
-          mapTypeId: 'terrain'
-        });
-
-        // Create a <script> tag and set the USGS URL as the source.
-    /*     var script = document.createElement('script');
-        // This example uses a local copy of the GeoJSON stored at
-        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-      }
-
-      // Loop through the results array and place a marker for each
-      // set of coordinates.
-      window.eqfeed_callback = function(results) {
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-        } */
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-// Add some markers to the map.
-// Note: The code uses the JavaScript Array.prototype.map() method to
-// create an array of markers based on a given "locations" array.
-// The map() method here has nothing to do with the Google Maps API.
-var markers = locations.map(function(location, i) {
-  return new google.maps.Marker({
-    position: location,
-    label: labels[i % labels.length],
-    map:map
-  });
-});
-
-// Add a marker clusterer to manage the markers.
-var markerCluster = new MarkerClusterer(map, markers,
-    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+<!-- 
+    <script src="/logic/map-logic_1.js"></script>
+   -->
+<!-- Replace following script src -->
+<!-- <script src="/maps/documentation/javascript/examples/markerclusterer/markerclustererplus@4.0.1.min.js">
+</script>
+ -->
+<!-- Code Editor -->
+<script>
+  function allowDrop(ev) {
+  ev.preventDefault();
 }
 
-/* TEST PURPOSES ONLY */
-var locations = [
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
 
-{lat: 41.000000, lng: -72.00000}
-]
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
 </script>
-<!-- Replace following script src -->
-<script src="/maps/documentation/javascript/examples/markerclusterer/markerclustererplus@4.0.1.min.js">
-</script>
-
-<!-- Code Editor -->
 <script>
   const first = document.querySelector(".first");
 const iframe = document.querySelector("iframe");
@@ -784,14 +1002,14 @@ function saveNotes(note) {
 
 
 <!-- OTHER  -->
-<script async defer
+<!-- <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ42MPk0Ua5QMFU_YLM1X_yoF6LVKTpPw&callback=initMap">
-</script>
+</script> -->
       
-    </script>
+<!-- 
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ42MPk0Ua5QMFU_YLM1X_yoF6LVKTpPw&callback=initMap">
-    </script>
+    </script> -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

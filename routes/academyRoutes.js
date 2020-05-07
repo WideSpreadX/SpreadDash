@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 
-var classData = require("../data/classData");
-var waitListData = require("../data/waitinglistData");
-
+const classData = require("../data/classData");
+const waitListData = require("../data/waitinglistData");
 
 // ===============================================================================
 // ROUTING

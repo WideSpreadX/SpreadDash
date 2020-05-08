@@ -38,25 +38,60 @@ router.get("/", (req, res) => res.render("welcome"));
 // Dashboard Page
 router.get("/dashboard", ensureAuthenticated, (req, res) => {
   res.render("dashboard");
-
-
-
-  log(chalk.blue("Hello world!"));
+  log(chalk.blue("Hello Dashboard Home!"));
 });
-// Music Page
+
+/* 
+
+Special Event Routes - URGENT!!!
+
+*/
+
+// Cromwell High School - Graduation - Class of 2020 - 360 VR Livestream smartEvent (AutoDistancing AI)
+
+// Graduation - Home
+router.get("/graduation", ensureAuthenticated, (req, res) => {
+  res.render("graduation");
+  log(chalk.blue("Hello Graduation Home!"));
+});
+
+// Graduation - Class
+router.get("/graduation/class", ensureAuthenticated, (req, res) => {
+  res.render("class2020");
+  log(chalk.blue("Hello Graduation class2020!"));
+});
+
+// Prom - Home
+router.get("/prom", ensureAuthenticated, (req, res) => {
+  res.render("prom");
+  log(chalk.blue("Hello Prom Home!"));
+});
+
+// Music Page - Home
 router.get("/music", ensureAuthenticated, (req, res) => {
   res.render("music");
-
-
-
-  log(chalk.blue("Hello world!"));
+  log(chalk.blue("Hello Music Home!"));
 });
+
+
+/* 
+
+Main System Routes
+
+*/
 
 // Help Page
 router.get("/help", ensureAuthenticated, (req, res) => {
   res.render("help");
   log(chalk.red("Hello Help!"));
 });
+
+
+/* 
+
+          SpreadShield
+
+*/
 
 // SpreadShield
 router.get("/spreadshield", ensureAuthenticated, (req, res) => {
@@ -66,6 +101,15 @@ router.get("/spreadshield", ensureAuthenticated, (req, res) => {
 router.get("/spreadshield-control", ensureAuthenticated, (req, res) => {
   res.render("spreadshield-control")
 });
+
+
+/* 
+
+          Academy
+
+*/
+
+
 // Academy
 router.get("/academy", ensureAuthenticated, (req, res) => {
   res.render("academy")
@@ -115,14 +159,16 @@ router.get("/c-sharp", ensureAuthenticated, (req, res) => {
 router.get("/cpp", ensureAuthenticated, (req, res) => {
   res.render("cpp")
 });
-
+// Academy - Classes
 router.get('/academy/classes', ensureAuthenticated, (req, res) => {
   res.render('classes');
 });
 
+// Academy - Register New Class GET
 router.get('/academy/register-class', ensureAuthenticated, (req, res) => {
   res.render('register-class');
 });
+// Academy - Register New Class POST
 router.post('/academy/register-class', (req, res) => {
   const { name, subject, skill_level, lessons, cert_name, teacher, teacher_aide } = req.body;
     let errors = [];
@@ -234,35 +280,136 @@ router.get("/business", ensureAuthenticated, (req, res) => {
   res.render("business")
 });
 
-// Shopping
+
+
+/* 
+
+          Shopping
+
+*/
+
+
+// Shopping - Home
 router.get("/shopping", ensureAuthenticated, (req, res) => {
   res.render("shopping")
 });
 
-// Leisure
+// Shopping - Real Estate
+router.get("/shopping/real-estate", ensureAuthenticated, (req, res) => {
+  res.render("real-estate")
+});
+
+// Shopping - Clothing
+router.get("/shopping/clothing", ensureAuthenticated, (req, res) => {
+  res.render("clothing")
+});
+
+// Shopping - Clothing - Men
+router.get("/shopping/clothing/men", ensureAuthenticated, (req, res) => {
+  res.render("men")
+});
+
+// Shopping - Clothing - Men - T-Shirts
+router.get("/shopping/clothing/men/t-shirts", ensureAuthenticated, (req, res) => {
+  res.render("t-shirts")
+});
+
+// Shopping - Home Goods
+router.get("/shopping/home-goods", ensureAuthenticated, (req, res) => {
+  res.render("home-goods")
+});
+
+// Shopping - Electronics
+router.get("/shopping/electronics", ensureAuthenticated, (req, res) => {
+  res.render("electronics")
+});
+
+// Shopping - Grocery
+router.get("/shopping/grocery", ensureAuthenticated, (req, res) => {
+  res.render("grocery")
+});
+
+// Shopping - Pharmacy
+router.get("/shopping/pharmacy", ensureAuthenticated, (req, res) => {
+  res.render("pharmacy")
+});
+
+
+
+/* 
+
+          Leisure
+
+*/
+
+// Leisure - Home
 router.get("/leisure", ensureAuthenticated, (req, res) => {
   res.render("leisure")
 });
+
+
+/* 
+
+          Medical
+
+*/
+
 // Medical
 router.get("/medical", ensureAuthenticated, (req, res) => {
   res.render("medical")
 });
+
+
+/* 
+
+          Finacnial
+
+*/
+
 // Financial
 router.get("/financial", ensureAuthenticated, (req, res) => {
   res.render("financial")
 });
+
+/* 
+
+          Creation
+
+*/
+
 // Creation
 router.get("/creation", ensureAuthenticated, (req, res) => {
   res.render("creation")
 });
+
+/* 
+
+          Storage
+
+*/
 // Storage
 router.get("/storage", ensureAuthenticated, (req, res) => {
   res.render("storage")
 });
+
+/* 
+
+          SocialSpread
+
+*/
+
 // SocialSpread
 router.get("/socialspread", ensureAuthenticated, (req, res) => {
   res.render("socialspread")
 });
+
+
+/* 
+
+          COVID-AR
+
+*/
+
 // COVID-AR
 router.get("/covid-ar", ensureAuthenticated, (req, res) => {
   res.render("covid-ar")
@@ -304,6 +451,14 @@ router.get("/news", ensureAuthenticated, (req, res) => {
   res.render("news")
   
 });
+
+
+/* 
+
+          SpreadSpace
+
+*/
+
 
 // SpreadSpace
 router.get("/spreadspace", ensureAuthenticated, (req, res) => {

@@ -88,6 +88,268 @@ font-family: 'Bilbo Swash Caps', cursive;
         padding: 0;
         padding-bottom: 80px;
       }
+/* 
+
+        Graduation 
+
+*/
+
+/* Graduation - Home */
+
+.graduation-header {
+  height: 110px;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999; 
+  float: none;
+}
+
+.spreadUser-data-bar {
+  width: 40%;
+  height: 110px;
+  float: left;
+  background: rgba(233, 63, 63, 0.534);
+  border-bottom-right-radius: 20px;
+  border-right: groove 2px white;
+  border-bottom: groove 2px white;
+  box-shadow: 0 0 8px white, 0 0 5px red, inset 0 0 15px rgba(255, 255, 255, 0.685);
+  transition: ease-in 0.5s;
+
+}
+.spreadUser-data-bar:hover {
+  background: rgba(241, 107, 107, 0.507);
+  transition: ease-in 0.5s;
+}
+#spreadUser-img {
+  width: 93px;
+  height: 93px;
+  margin-top: 5px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 2px groove white;
+  padding: 7px;
+  cursor: pointer;
+  box-shadow: 0 0 10px white, 0 0 5px red, inset 0 0 10px red, inset  0 0 3px white;
+  float: left;
+}
+#spreadUser-img:hover {
+  box-shadow: 0 0 10px white, 0 0 5px red, inset 0 0 10px red, inset  0 0 8px white, 0 0 8px white;
+  background: rgba(255, 255, 255, 0.473);
+
+}
+#spreadUser-img img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: groove 1px white;
+  box-shadow: 0 0 5px red, inset 0 0 8px black;
+
+}
+#spreadUser-data {
+  width: 500px;
+  height: 90px;
+  float: left;
+  position: absolute;
+  left: 120px;
+  top: 5px;
+}
+#spreadUser-name {
+  width: 350px;
+  height: 40px;
+  line-height: 40px;
+}
+#spreadUser-name h3 {
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  padding: 0;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: left;
+}
+#spreadUser-role {
+  width: 150px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 22px;
+}
+#spreadUser-role h4 {
+  color: rgba(163, 159, 159, 0.705);
+  font-size: 24px;
+  text-shadow: 0 0 2px rgba(102, 95, 95, 0.671), 0 0 1px red;
+  font-weight: bolder;
+}
+#spreadUser-utils {
+  width: 650px;
+  float: none;
+}
+#spreadUser-utils li {
+  width: auto;
+  padding: 5px;
+  border-left: solid 1px rgba(255, 255, 255, 0.692);
+  list-style: none;
+  float: left;
+  font-family: 'Julius Sans One', sans-serif;
+  margin-left: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.664), 0 0 2px #000, 0 0 1px rgba(255, 255, 255, 0.541);
+  color: #000;
+}
+#spreadUser-utils li:first-of-type {
+  border: none;
+}
+.school-data {
+  width: 40%;
+  height: 100px;
+  width: 20%;
+  float: left;
+}
+#school-logo {
+}
+#school-logo img {
+  width: 350px;
+  position: absolute;
+  z-index: 9100;
+  opacity: 0.9;
+}
+#school-name {
+  position: absolute;
+  top: 125px;
+  margin-left: -50px;
+  width: 450px;
+  z-index: 9110;
+}
+#school-name h1 {
+  color: red;
+  text-shadow: 0 0 3px white;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: 'Julius Sans One', sans-serif;
+}
+#current-data__visual-tag {
+  float: left;
+  width: 40%;
+  height: 100px;
+}
+
+#targetUser-connections-slider {
+  width: 5000px;
+}
+#targetUser-connections {
+  width: 100%;
+  height: 50px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  float: none;
+}
+#targetUser-connections li {
+  width: 100px;
+  height: 50px;
+  float: left;
+  list-style: none;
+  padding: 3px;
+}
+
+
+
+/* Livestream Video */
+
+#main-livestream-container {
+  width: 100vw;
+  height: 86vh;
+  position: fixed;
+  top: 12vh;
+  left: 0;
+  z-index: -1000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#main-stream {
+  background: rgba(255, 0, 0, 0.178);
+  width: 95vw;
+  height: 86vh;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-radius: 20px;
+  margin-left: 2.5vw;
+  overflow: hidden;
+  box-shadow: inset 0 0 8px white, 0 0 5px black;
+}
+#main-stream video {
+  background: rgba(0, 0, 0, 0.61);
+  width: 100%;
+}
+#main-stream-data {
+  position: fixed;
+  bottom: 10vh;
+  left: 5vw;
+  height: 10vh;
+  width: 90vw;
+}
+
+#main-stream-header {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px black, 0 0 12px black;
+  background: rgba(66, 61, 61, 0.493);
+  transition: ease-in-out 0.4s;
+}
+#main-stream-header:hover {
+  transition: ease-in 0.4s;
+  background: rgba(0, 0, 0, 0.767);
+}
+#main-stream-header h2 {
+  font-size: 32px;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 2px red;
+  color: rgba(255, 255, 255, 0.658);
+}
+#main-stream-header h4 {
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+  font-size: 22px;
+  text-shadow: 0 0 2px rgba(255, 0, 0, 0.61);
+  color: rgba(255, 255, 255, 0.808);
+}
+/* WideSpread Logo */
+.ws-logo {
+  position: absolute;
+  left: 200px;
+  bottom: 250px;
+  opacity: 0.3;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: ease-in 0.4s;
+  cursor: help;
+  padding: 3px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.548), 0 0 3px rgba(255, 255, 255, 0.678), 0 0 4px lightskyblue, inset 0 0 4px lightskyblue;
+}
+#main-stream img {
+  width: 120vw;
+  margin-left: -25vw;
+  margin-top: -25vh;
+}
+.ws-logo:hover {
+  opacity: 0.7;
+  transition: ease-in 0.4s;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.555), 0 0 8px white,  0 0 6px lightskyblue;
+}
+.ws-logo img {
+  padding: 10px;
+  width: 90px;
+  height: 90px;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+/* 
+
+        Prom 
+
+*/
+
 
       #div1 {
         border: solid 2px white;
@@ -832,7 +1094,65 @@ audio {
 .class-subject-card-header {
   border-bottom: solid 2px lightskyblue;
 }
+
+.item-sales-card {
+  width: 375px;
+  height: 500px;
+  margin-left: 30px;
+  border: solid 1px white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.image-slider-container {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 225px;
+  box-shadow: 0 0 10px white;
+  border-radius: 10px;
+}
+.image-slider {
+  width: 1000px;
+}
+.item-sales-card img {
+  width: 200px;
+}
+.item-sales-card h5 {
+  text-align: right;
+  font-size: 22px;
+}
+.item-sales-card h6 {
+  text-align: right;
+  font-size: 32px;
+  color: green;
+}
+.item-sales-card p {
+  padding: 8px;
+  padding-bottom: 15px;
+}
+.add-to-cart {
+  background: rgba(255, 255, 255, 0.459);
+  float: none;
+  width: 375px;
+  margin-left: -10px;
+  height: 45px;
+  border-top: groove 2px grey;
+  border-bottom: groove 2px grey;
+  box-shadow: inset 0 0 4px lightskyblue, 0 0 6px white, 0 0 3px lightskyblue; 
+}
+.save-item {
+  float: left;
+  width: 150px;
+}
+.add-item-to-cart {
+  float: left;
+  width: 150px;
+  text-align: right;
+  margin-left: 75px;
+}
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="widespread-container">

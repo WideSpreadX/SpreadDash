@@ -41,6 +41,17 @@ router.get("/dashboard", ensureAuthenticated, (req, res) => {
   log(chalk.blue("Hello Dashboard Home!"));
 });
 
+
+/* 
+      Celebration of Life
+*/
+
+// Celebration of Life - Home
+router.get("/celebration-life", ensureAuthenticated, (req, res) => {
+  res.render("celebration-life");
+  log(chalk.blue("Hello Celebration of Life - Home!"));
+});
+
 /* 
 
 Special Event Routes - URGENT!!!

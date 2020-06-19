@@ -72,6 +72,18 @@ router.get("/graduation/class", ensureAuthenticated, (req, res) => {
   log(chalk.blue("Hello Graduation class2020!"));
 });
 
+// Graduation - Class Screen
+router.get("/graduation/class-screen", ensureAuthenticated, (req, res) => {
+  res.render("class-screen");
+  log(chalk.blue("Hello Graduation class Screen!"));
+});
+
+// Graduation - Class VR
+router.get("/graduation/class-vr", ensureAuthenticated, (req, res) => {
+  res.render("class-vr");
+  log(chalk.blue("Hello Graduation class VR!"));
+});
+
 // Prom - Home
 router.get("/prom", ensureAuthenticated, (req, res) => {
   res.render("prom");

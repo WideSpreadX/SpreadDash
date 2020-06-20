@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="5sb7wDuHomWcznqcG_a-X704L3Rc88LQRdnpbQGOFR4" />
     <title>WideSpread</title>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Italianno&family=Miss+Fajardose&family=Rock+Salt&family=Sulphur+Point&family=Tangerine:wght@700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
     <script src="ejs.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Gruppo|Italianno|Megrim|Syncopate"
         rel="stylesheet">
@@ -96,33 +97,112 @@ font-family: 'Bilbo Swash Caps', cursive;
 
  */
 
+ /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* 
+        font-family: 'Alex Brush', cursive;
+        font-family: 'Great Vibes', cursive;
+        font-family: 'Italianno', cursive;
+        font-family: 'Miss Fajardose', cursive;
+        font-family: 'Rock Salt', cursive;
+        font-family: 'Sulphur Point', sans-serif;
+        font-family: 'Tangerine', cursive;
+        font-family: 'UnifrakturCook', cursive;
+        
+*/
+.cob-container {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.cob-menu {
+}
+.cob-header {
+}
+.cob-header h2 {
+}
+.cob-header h1 {
+  color: white;
+}
  .celebration-images {
    width: 90vw;
    margin-left: 5vw;
-   height: 80vh;
+   height: 70vh;
    float: none;
    margin-top: 30px;
+   cursor: grab;
+   transition: 1s;
  }
  .celebration-images li {
     width: 400px;
+    height: 800px;
    float: left;
-   max-height: 500px;
+   max-height: 800px;
    margin-left: 30px;
+   margin-bottom: 30px;
    list-style: none;
    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.603);
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.603), inset 0 0 150px rgba(7, 113, 235, 0.068);
+   opacity: 0.5;
+   transition: ease-in 1.0s;
+   color: rgb(135, 135, 136);
+ }
+ .celebration-images li:hover {
+   transition: ease-in 1.0s;
+   opacity: 1.0;
+   color: white;
+   box-shadow: inset 0 0 40px rgba(7, 113, 235, 0.103), inset 0 0 60px rgba(255, 255, 255, 0.205), 0 0 10px white;
  }
 
  .celebration-images img {
-   max-height: 800px;
-    width: 400px;
-    border-radius: 10px;
-    cursor: none;
+    width: 350px;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-bottom: groove 4px white;
+    box-shadow: 0px -10px 20px rgba(7, 113, 235, 0.247), 0 0 12px white, inset 0 0 18px white, inset 0 0 4px white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: grabbing;
+    
  }
  .celebration-images p {
-   margin-top: -50px;
+ /* 
+        font-family: 'Alex Brush', cursive;
+        
+        font-family: 'UnifrakturCook', cursive;
+        font-family: 'Tangerine', cursive;
+        font-family: 'Rock Salt', cursive;
+        font-family: 'Miss Fajardose', cursive;
+        font-family: 'Italianno', cursive;
+        font-family: 'Sulphur Point', sans-serif;
+*/
+cursor: text;
+        font-family: 'Great Vibes', cursive;
+   margin-top: 25px;
+   text-shadow: 0 0 8px white;
+   width: 300px;
+   margin-left: 35px;
+   font-size: 36px;
  }
 /* 
 

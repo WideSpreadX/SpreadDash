@@ -52,6 +52,42 @@ router.get("/celebration-life", ensureAuthenticated, (req, res) => {
   log(chalk.blue("Hello Celebration of Life - Home!"));
 });
 
+// Celebration of Life - LeAnn
+router.get("/celebration-of-life/leann", ensureAuthenticated, (req, res) => {
+  res.render("celebration-of-life-leann");
+  log(chalk.blue("Hello Celebration of Life - LeAnn!"));
+});
+
+// Celebration of Life - Junior
+router.get("/celebration-of-life/jonny", ensureAuthenticated, (req, res) => {
+  res.render("celebration-of-life-jonny");
+  log(chalk.blue("Hello Celebration of Life - Jonny!"));
+});
+
+// Celebration of Life - Tommy
+router.get("/celebration-of-life/tommy", ensureAuthenticated, (req, res) => {
+  res.render("celebration-of-life-tommy");
+  log(chalk.blue("Hello Celebration of Life - Home!"));
+});
+
+// Celebration of Life - Fran
+router.get("/celebration-of-life/fran", ensureAuthenticated, (req, res) => {
+  res.render("celebration-of-life-fran");
+  log(chalk.blue("Hello Celebration of Life - Fran!"));
+});
+
+// Celebration of Life - 9 & Dine
+router.get("/celebration-of-life/nine-and-dine", ensureAuthenticated, (req, res) => {
+  res.render("celebration-of-life-nine-and-dine");
+  log(chalk.blue("Hello Celebration of Life - 9 & Dine!"));
+});
+
+
+
+
+
+
+
 /* 
 
 Special Event Routes - URGENT!!!

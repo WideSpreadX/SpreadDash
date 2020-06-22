@@ -131,6 +131,7 @@ font-family: 'Bilbo Swash Caps', cursive;
   width: 100vw;
   overflow-x: hidden;
   overflow-y: scroll;
+  background: rgb(31, 32, 32);
 }
 .cob-menu {
 
@@ -322,7 +323,7 @@ font-family: 'Bilbo Swash Caps', cursive;
   }
   .widespread-link li {
     list-style: none;
-    background: #222;
+    background: rgba(34, 34, 34, 0.63);
     text-align: center;
     padding: 5px;
     border-radius: 5px;
@@ -342,11 +343,22 @@ font-family: 'Bilbo Swash Caps', cursive;
 .main-heading {
   font-family: 'Tangerine', cursive;
   z-index: -100;
+  background: rgba(38, 75, 153, 0.322);
+  box-shadow: inset 0 0 30px black, inset 0 0 50px rgba(28, 34, 126, 0.377), inset 0 0 60px rgba(0, 0, 0, 0.233), inset 0px -10px 20px rgba(0, 0, 0, 0.911), 0 0 5px #444;
+  cursor: grabbing;
+  text-align: center;
+}
+.ole-man {
+  padding-top: 10px;
 }
 .main-heading h1 {
   font-size: 150px;
   text-shadow: 0 0 10px white, 0 0 20px rgb(33, 45, 212), 0 0 30px white;
   color: rgba(255, 255, 255, 0.644);
+}
+.main-heading img {
+  margin-left: -40px;
+  opacity: 0.5;
 }
 .celebration-menu {
   background: lime;
@@ -368,9 +380,11 @@ font-family: 'Bilbo Swash Caps', cursive;
   text-align: center;
 }
 .nav-menu a {
+  font-style: none;
   transition: ease-in 0.3s;
 }
 .nav-menu a:hover {
+  font-style: none;
   transition: ease-in 0.3s;
   color: rgba(255, 255, 255, 0.479);
   text-decoration: none;
@@ -1570,6 +1584,88 @@ audio {
   font-size: 5rem;
   width: 100%;
   background: purple;
+}
+
+
+
+
+
+/* 
+
+                            CELL PHONE PORTRAIT VIEW
+
+ */
+
+
+
+
+
+ @media only screen and (max-width: 500px) {
+  body {
+   
+
+  }
+
+  /* cob-menu */
+  
+  .cob-container {
+  }
+  .cob-menu {
+  }
+  .main-heading {
+  }
+  .cob-header h1 {
+  }
+  .celebration-images {
+    width: 380px;
+  }
+  .celebration-images img {
+    width: 300px;
+  }
+
+  .main-heading h1 {
+    font-size: 77px;
+  }
+  .main-heading img {
+    display: none;
+  }
+  .nav-menu {
+    margin-top: 30px;
+  }
+  .nav-menu li {
+    font-size: 24px;
+  }
+  .celebration-header h1 {
+    font-size: 48px;
+  }
+  #journal {
+    background: white;
+    width: 350px;
+    border-radius: 12px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px white;
+  }
+  .date {
+    font-family: 'Tangerine', cursive;
+    font-size: 32px;
+    padding: 20px;
+  }
+  .date p {
+    color: black;
+  }
+  .entry {
+    border-radius: 12px;
+    padding: 8px;
+    background: black;
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 18px;
+    box-shadow: inset 0 0 3px white, 0 0 2px #555;
+  }
+  .entry p {
+    margin-top: 22px;
+  }
 }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">

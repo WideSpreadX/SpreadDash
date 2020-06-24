@@ -82,6 +82,10 @@ router.get("/celebration-of-life/nine-and-dine", ensureAuthenticated, (req, res)
   log(chalk.blue("Hello Celebration of Life - 9 & Dine!"));
 });
 
+router.get("/event/golf/dvo-classic", ensureAuthenticated, (req, res) => {
+  res.render("dvo-classic");
+  log(chalk.blue("Hello D.V.O. Classic!!!"));
+});
 
 
 

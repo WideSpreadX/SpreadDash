@@ -120,14 +120,22 @@ font-family: 'Bilbo Swash Caps', cursive;
   box-shadow: 0 0 5px rgba(135, 206, 250, 0.678), 0 0 15px rgba(255, 255, 255, 0.445), inset 0 0 3px lightskyblue, inset 0 0 6px white;
   border-radius: 12px;
   text-shadow: 0 0 1px white;
+        font-family: 'Sulphur Point', sans-serif;
+}
+button {
+        font-family: 'Sulphur Point', sans-serif;
+        font-size: 20px;
+
 }
 .btn {
   box-shadow: 0 0 5px rgba(135, 206, 250, 0.678), 0 0 15px rgba(255, 255, 255, 0.445), inset 0 0 3px lightskyblue, inset 0 0 6px white;
   border-radius: 12px;
   text-shadow: 0 0 1px white;
+        font-family: 'Sulphur Point', sans-serif;
 }
 .btn-primary {
         background:rgba(51, 116, 238, 0.801);
+        font-family: 'Sulphur Point', sans-serif;
 
 }
 .card-body h1 {
@@ -135,10 +143,11 @@ font-family: 'Bilbo Swash Caps', cursive;
   font-size: 20px;
 }
 .form-group input {
-  background: lime;
 }
 .form-control {
-  background: lime;
+  border-radius: 20px;
+  padding: 15px;
+        font-family: 'Sulphur Point', sans-serif;
 }
 label {
         font-family: 'Sulphur Point', sans-serif;
@@ -204,6 +213,20 @@ label {
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.801);
   font-family: 'Sulphur Point', sans-serif;
 }
+
+
+
+/* 
+
+          Footer
+
+ */
+
+ .footer {
+   width: 100%;
+   align-content: center;
+   text-align: center;
+ }
  /*
  
   Coming Soon
@@ -1005,6 +1028,39 @@ label {
   height: 100%;
   width: 100%;
 }
+
+/* Messages */
+.message-area {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#messages {
+  background: rgba(20, 163, 219, 0.719);
+  height: 300px;
+  width: 300px;
+}
+.contact-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+}
+.message-bar-type {
+  background: rgb(38, 40, 41);
+  height: 50%;
+}
+.message-type {
+  background: rgba(8, 214, 241, 0.63);
+  height: 12%;
+  text-align: center;
+  padding: 8px;
+}
 /* Livestream Video */
 
 #main-livestream-container {
@@ -1212,7 +1268,7 @@ label {
       }
       .search {
         padding-top: 5px;
-        width: 80%;
+        width: 350px;
         float: left;
       }
       .search input {

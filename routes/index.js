@@ -41,6 +41,12 @@ router.get("/dashboard", ensureAuthenticated, (req, res) => {
   log(chalk.blue("Hello Dashboard Home!"));
 });
 
+// Messaging Page
+router.get("/messaging", ensureAuthenticated, (req, res) => {
+  res.render("messages.ejs");
+  log(chalk.blue("Hello Messages Home!"));
+});
+
 
 /* 
 

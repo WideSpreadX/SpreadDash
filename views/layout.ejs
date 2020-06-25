@@ -74,7 +74,7 @@ font-family: 'Bilbo Swash Caps', cursive;
       }
       /* WideSpread Welcome */
       .card {
-        background: black;
+        background: transparent;
       }
       .card p {
         padding-bottom: 20px;
@@ -89,14 +89,28 @@ font-family: 'Bilbo Swash Caps', cursive;
         padding: 0;
         padding-bottom: 80px;
       }
-
+      .welcome-header {
+        background: lime;
+        position: fixed;
+        top: 20px;
+        left: 0;
+        width: 100%;
+      }
       .welcome-logo {
-        width: 100vw;
+        top: 0;
       }
       .welcome-logo img {
+        position: absolute;
+        top: -50px;
+        z-index: 400;
         width: 100%;
       }
       .welcome-header h1 {
+        position: absolute;
+        z-index: 500;
+        margin-top: 50px;
+        z-index: 500;
+        width: 100%;
         font-family: 'Sulphur Point', sans-serif;
         color:rgba(51, 116, 238, 0.801);
   text-shadow: 0 0 1px white;
@@ -115,6 +129,16 @@ font-family: 'Bilbo Swash Caps', cursive;
 .btn-primary {
         background:rgba(51, 116, 238, 0.801);
 
+}
+.card-body h1 {
+        font-family: 'Sulphur Point', sans-serif;
+  font-size: 20px;
+}
+.form-group input {
+  background: lime;
+}
+.form-control {
+  background: lime;
 }
 label {
         font-family: 'Sulphur Point', sans-serif;
@@ -175,17 +199,33 @@ label {
 
  }
 
-
+.dashboard-card h1 a {
+  color:rgba(51, 116, 238, 0.801);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.801);
+  font-family: 'Sulphur Point', sans-serif;
+}
  /*
  
   Coming Soon
  
   */
 .coming-soon-header {
-  margin-top: 40px;
+  margin-top: 70px;
+  background: rgba(255, 68, 0, 0.377);
+  margin-bottom: 40px;
+  transition: ease-in 1.0s;
+}
+.coming-soon-header:hover {
+  transition: ease-in 1.0s;
+  background: rgba(255, 68, 0, 0.897);
+
 }
 .coming-soon-header h1 {
+  font-family: 'Sulphur Point', sans-serif;
   font-size: 50px;
+  text-shadow: 0 0 2px rgb(255, 136, 0);
+  color: rgb(255, 153, 0);
+  box-shadow: 0 0 12px rgb(255, 153, 0);
 
 }
 

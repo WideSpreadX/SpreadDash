@@ -88,6 +88,12 @@ router.get("/event/golf/dvo-classic", ensureAuthenticated, (req, res) => {
 });
 
 
+router.get("/event/golf", ensureAuthenticated, (req, res) => {
+  res.render("golf");
+  log(chalk.blue("Hello Golf"));
+});
+
+
 
 
 

@@ -43,6 +43,19 @@ router.get("/dashboard", ensureAuthenticated, (req, res) => {
 
 
 /* 
+
+                    FlexFloor
+
+*/
+
+// FlexFloor Home
+router.get("/flexfloor", ensureAuthenticated, (req, res) => {
+  res.render("flexfloor");
+  log(chalk.blue("Hello FlexFloor Home!"));
+});
+
+
+/* 
       Celebration of Life
 */
 

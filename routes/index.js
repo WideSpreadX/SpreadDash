@@ -22,7 +22,7 @@ const db = require("../config/keys").MongoURI;
 /* const app = express(); */
 const app = require('express')();
 const http = require('http').createServer(app);
-
+const Product = require("../models/Product");
 
 require("./apiRoutes")(app);
 require("./academyRoutes")(app);
@@ -30,7 +30,6 @@ require("./academyRoutes")(app);
 
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
-
 
 // Welcome Page
 router.get("/", (req, res) => res.render("welcome"));
@@ -384,6 +383,48 @@ router.get("/business", ensureAuthenticated, (req, res) => {
 */
 
 
+
+// Get All Products
+router.get('/shopping/all-products', function(req, res, next) {
+  Product.find(function (err, products) {
+    if (err) return next(err);
+    res.json(products);
+  });
+ });
+
+ router.get('/shopping/product/:id', function(req, res, next) {
+  Product.find(function (err, products) {
+    if (err) return next(err);
+    res.json(products);
+  });
+ });
+
+// Save a Product
+router.post('/shopping/product', function(req, res, next) {
+  Product.create(req.body, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+ });
+
+ 
+/* UPDATE PRODUCT */
+router.put('/shopping/product/:id', function(req, res, next) {
+  Product.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+ });
+ 
+ 
+ /* DELETE PRODUCT */
+router.delete('/shopping/product/:id', function(req, res, next) {
+  Product.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+ });
+ 
 // Shopping - Home
 router.get("/shopping", ensureAuthenticated, (req, res) => {
   res.render("shopping")

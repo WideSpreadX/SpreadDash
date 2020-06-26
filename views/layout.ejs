@@ -522,7 +522,7 @@ label {
     box-shadow: 0 0 4px white, inset 0 0 7px rgba(255, 255, 255, 0.719);
   }
   .widespread-link a {
-        font-family: 'Sulphur Point', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
     color: rgba(255, 255, 255, 0.582);
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.411);
     transition: ease-in 0.3s;
@@ -2131,13 +2131,40 @@ audio {
     left: -1000px;
 
   }
+  .spread-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    background: rgba(19, 21, 26, 0.89);
+    border-bottom: solid 1px black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 0 120px rgba(0, 0, 0, 0.568), 0 0 60px black, inset 0 5px 10px rgba(255, 255, 255, 0.603);
+    transition: ease-in 0.8s;
+  }
+  .spread-menu:hover {
+    background: rgba(128, 128, 128, 0.918);
+    border-bottom: groove 2px white;
+    transition: ease-in 0.8s;
+    box-shadow: 0 0 30px lightskyblue;
+  }
+  .spread-menu h1 {
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 32px;
+    text-shadow: 0 0 8px rgba(135, 206, 250, 0.5), 0 0 27px white;
+    color: rgba(0, 0, 0, 0.527);
+  }
 }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="widespread-container">
-
+      <div class="spread-menu">
+        <h1>WideSpread</h1>
+      </div>
     
       <%- body %>
     </div>

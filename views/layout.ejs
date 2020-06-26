@@ -196,15 +196,36 @@ label {
   transition: ease-in 0.4s;
 
 }
+.magenta-card {
+  border-right: solid 30px rgba(255, 0, 255, 0.521);
+  border-top: solid 2px rgba(255, 0, 255, 0.521);
+  border-bottom: solid 2px rgba(255, 0, 255, 0.521);
+}
+.magenta-card:hover {
+  border-right: solid 30px magenta;
+  border-top: solid 2px magenta;
+  border-bottom: solid 2px magenta;
+}
+.lime-card {
+  border-right: solid 30px rgba(0, 255, 21, 0.521);
+  border-top: solid 2px rgba(0, 255, 21, 0.521);
+  border-bottom: solid 2px rgba(0, 255, 21, 0.521);
+}
+.lime-card:hover {
+  border-right: solid 30px lime;
+  border-top: solid 2px lime;
+  border-bottom: solid 2px lime;
+}
  .dashboard-image {
-  height: 450px;
+  height: auto;
   overflow-y: scroll;
   overflow-x: hidden;
    width: 80vw;
    margin-left: 5vw;
  }
  .dashboard-image img {
-   width: 100%;
+   max-width: 100%;
+   height: 75px;
 
  }
 
@@ -561,7 +582,7 @@ label {
   height: 50px;
 }
 .nav-menu li {
-        font-family: 'Great Vibes', cursive;
+  font-family: 'Great Vibes', cursive;
   width: 20%;
   line-height: 50px;
   color: white;
@@ -1067,6 +1088,10 @@ label {
   font-size: 100px;
   text-align: center;
   color: rgba(95, 209, 120, 0.527);
+}
+.golf-course {
+  text-align: center;
+  margin-top: 20px;
 }
 .course-overview {
 
@@ -2156,6 +2181,56 @@ audio {
     text-shadow: 0 0 8px rgba(135, 206, 250, 0.5), 0 0 27px white;
     color: rgba(0, 0, 0, 0.527);
   }
+  .spread-search {
+    width: 74%;
+    height: 75px;
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;  
+    margin-top: 5px;
+  }
+  .spread-search input:first-of-type {
+    width: 88%;
+    background: rgba(0, 0, 0, 0.767);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 35px;
+    font-family: 'Sulphur Point', sans-serif;
+    outline: none;
+    padding: 12px;
+    box-shadow: inset 0 0 10px rgba(151, 136, 136, 0.664);
+    transition: ease-in 0.3s;
+  }
+  .spread-search input:first-of-type:hover {
+    background: white;
+    box-shadow: inset 0 0 10px rgba(71, 68, 68, 0.555);
+    transition: ease-in 0.3s;
+  }
+  .spread-search input:last-of-type {
+    background:rgba(135, 206, 250, 0.562);
+    border-radius: 5px;
+    height: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: -8px;
+    outline: none;
+    box-shadow: inset 0 0 10px white, 0 0 5px white;
+    font-family: 'Sulphur Point', sans-serif;
+  }
+
+  .spread-nav {
+    float: right;
+    width: 25%;
+    display: inline-block;
+  }
+  .spread-nav li {
+    width: 50%;
+    float: left;
+    list-style: none;
+  }
+  .spread-nav li img {
+    width: 75px;
+  }
 }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
@@ -2163,7 +2238,18 @@ audio {
   <body>
     <div class="widespread-container">
       <div class="spread-menu">
-        <h1>WideSpread</h1>
+        <div class="spread-search">
+          <form action="">
+            <input type="text" placeholder="Search...">
+            <input type="submit" value="Go">
+          </form>
+        </div>
+        <div class="spread-nav">
+          <ul>
+            <li><img src="/site/messages_2a.png" alt=""></li>
+            <li><img src="/site/menu_1a.png" alt=""></li>
+          </ul>
+        </div>
       </div>
     
       <%- body %>

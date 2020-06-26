@@ -162,6 +162,13 @@ router.get("/music", ensureAuthenticated, (req, res) => {
 });
 
 
+// ArtistSpread
+router.get("/artistspread", ensureAuthenticated, (req, res) => {
+  res.render("artistspread");
+  log(chalk.blue("Hello ArtistSpread!"));
+});
+
+
 /* 
 
 Main System Routes

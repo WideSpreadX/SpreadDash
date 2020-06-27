@@ -9,8 +9,7 @@ const cheerio = require("cheerio");
 var logger = require("morgan");
 const classes = require("./classes"); */
 
-
-const user = require("./users");
+const User = require("../models/User");
 const COVIDmarker = require("../models/COVID");
 const Message = require("../models/Message");
 const Article = require("../models/Article");
@@ -35,10 +34,12 @@ app.use(express.urlencoded({ extended: true }));
 router.get("/", (req, res) => res.render("welcome"));
 
 // Dashboard Page
-router.get("/dashboard", ensureAuthenticated, (req, res) => {
-  res.render("dashboard");
-  log(chalk.blue("Hello Dashboard Home!"));
-});
+
+  
+  router.get("/dashboard", ensureAuthenticated, (req, res) => {
+    res.render("dashboard")
+    log(chalk.blue("Hello Dashboard Home!"));
+  });
 
 // Messaging Page
 router.get("/messaging", ensureAuthenticated, (req, res) => {

@@ -86,12 +86,15 @@ font-family: 'Bilbo Swash Caps', cursive;
   padding-left: 10px;
   margin-left: 30px;
   margin-top: 30px;
+  color: white;
+  font-family: 'Sulphur Point', sans-serif;
 }
 .spread-search input:last-of-type {
   border-radius: 50%;
   width: 50px;
   height: 50px;
   margin-left: -10px;
+  font-family: 'Sulphur Point', sans-serif;
 }
 .spread-nav {
   width: 60px;
@@ -108,9 +111,13 @@ font-family: 'Bilbo Swash Caps', cursive;
   width: 50px;
   height: 50px;
 }
+.spread-nav button {
+  border-radius: 50%;
+}
 .message-button {
   display: none;
 }
+
 #spreadMenu {
   height: 60px;
   border-radius: 20px;
@@ -136,7 +143,6 @@ font-family: 'Bilbo Swash Caps', cursive;
 
 @media only screen and (min-width: 1180px) {
   .spread-menu {
-    background: lime;
   }
 }
       body {
@@ -1503,11 +1509,13 @@ label {
   border: solid 3px rgb(0, 225, 255);
   border-radius: 8px;
   box-shadow: 0 0 4px white, inset 0 0 4px white;
-  background: rgba(255, 255, 255, 0.233);
+  background: rgba(255, 255, 255, 0);
 }
 .main-image img {
   padding: 12px;
   border-radius: 18px;
+  width: 80px;
+  box-shadow: 0 0 5px  rgba(41, 191, 218, 0.678), inset 0 0 20px rgba(41, 191, 218, 0.678);
 }
 
 /* 
@@ -1810,6 +1818,29 @@ audio {
   text-align: center;
   margin: 2px;
   padding: 10px;
+  border-bottom: 2px groove white;
+  border-radius: 30px 30px 10px 10px;
+  border-left: 1px groove white;
+  border-right: 1px groove white;
+  transition: ease-in 0.6s;
+  box-shadow: inset 0 -8px 12px rgba(255, 255, 255, 0.781);
+}
+.page-nav li:hover {
+  background:rgba(45, 167, 207, 0.39);
+  border-bottom: 2px groove rgb(23, 217, 231);
+  border-radius: 30px 30px 10px 10px;
+  border-left: 1px groove rgb(23, 217, 231);
+  border-right: 1px groove rgb(23, 217, 231);
+  transition: ease-in 0.6s;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.719), 0 0 2px white;
+  text-shadow: 0 0 1px white;
+}
+.class-header {
+
+}
+.class-header img {
+  width: 50px;
+  max-height: 50px;
 }
 /* List Nav */
 .list-nav {
@@ -2200,13 +2231,24 @@ audio {
   border-bottom: solid 2px lightskyblue;
 }
 
+.items-for-sale-container {
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+#itemsForSale {
+  padding-bottom: 100px;
+  width: 5000px;
+}
 .item-sales-card {
   width: 375px;
   height: 500px;
   margin-left: 30px;
+  margin-top: 30px;
   border: solid 1px white;
   border-radius: 10px;
   padding: 10px;
+  display: inline-block;
 }
 
 .image-slider-container {

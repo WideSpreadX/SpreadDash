@@ -447,6 +447,16 @@ router.get("/shopping/clothing", ensureAuthenticated, (req, res) => {
   res.render("clothing")
 });
 
+// Shopping - Clothing - Women
+router.get("/shopping/clothing/women", ensureAuthenticated, (req, res) => {
+  res.render("women-clothing")
+});
+
+// Shopping - Clothing - Women - T-Shirts
+router.get("/shopping/clothing/women/t-shirts", ensureAuthenticated, (req, res) => {
+  res.render("women-t-shirts")
+});
+
 // Shopping - Clothing - Men
 router.get("/shopping/clothing/men", ensureAuthenticated, (req, res) => {
   res.render("men")

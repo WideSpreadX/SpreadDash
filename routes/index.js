@@ -503,21 +503,63 @@ router.get("/leisure", ensureAuthenticated, (req, res) => {
 
 /* 
 
-          Medical
+          Wellness/Medical
 
 */
 
+// Wellness
+router.get("/wellness", ensureAuthenticated, (req, res) => {
+  res.render("wellness")
+});
+
+
+
+
 // Medical
-router.get("/medical", ensureAuthenticated, (req, res) => {
+router.get("/wellness/medical", ensureAuthenticated, (req, res) => {
   res.render("medical")
 });
 
 
-/* 
+
+// Yoga
+router.get("/wellness/yoga", ensureAuthenticated, (req, res) => {
+  res.render("yoga")
+});
+
+
+// Yoga - Classes
+router.get("/wellness/yoga/classes", ensureAuthenticated, (req, res) => {
+  res.render("yoga-classes")
+});
+
+
+// Yoga - Instructors
+router.get("/wellness/yoga/instructors", ensureAuthenticated, (req, res) => {
+  res.render("yoga-instructors")
+});
+
+
+// Yoga - Instructors - Clarice Wilson
+router.get("/wellness/yoga/instructors/clarice-wilson", ensureAuthenticated, (req, res) => {
+  res.render("yoga-clariceWilson")
+});
+
+
+// Yoga - Classroom
+router.get("/wellness/yoga/classroom", ensureAuthenticated, (req, res) => {
+  res.render("yoga-classroom")
+});
+
+
+
+
+/*
 
           Finacnial
 
-*/
+          */
+
 
 // Financial
 router.get("/financial", ensureAuthenticated, (req, res) => {

@@ -83,10 +83,16 @@ router.get("/celebration-of-life/jonny", ensureAuthenticated, (req, res) => {
   log(chalk.blue("Hello Celebration of Life - Jonny!"));
 });
 
+// Celebration of Life - Friends
+router.get("/celebration-of-life/friends", ensureAuthenticated, (req, res) => {
+  res.render("celebration-of-life-friends");
+  log(chalk.blue("Hello Celebration of Life - Friends!"));
+});
+
 // Celebration of Life - Tommy
 router.get("/celebration-of-life/tommy", ensureAuthenticated, (req, res) => {
   res.render("celebration-of-life-tommy");
-  log(chalk.blue("Hello Celebration of Life - Home!"));
+  log(chalk.blue("Hello Celebration of Life - Tommy!"));
 });
 
 // Celebration of Life - Fran

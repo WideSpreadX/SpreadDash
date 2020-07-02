@@ -158,6 +158,63 @@ font-family: 'Bilbo Swash Caps', cursive;
 
 .spread-menu-button {
 }
+
+/* SideNav */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1006;
+  background: rgba(51, 51, 51, 0.671);
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-top-right-radius: 30px;
+  border-left: groove 2px white;
+  border-top: groove 1px white;
+  box-shadow: inset 0 0 40px lightskyblue, 0 0 8px lightskyblue, 0 0 16px rgba(255, 255, 255, 0.795);
+}
+.sidenav:hover {
+  background: rgba(0, 0, 0, 0.822);
+  box-shadow: inset 0 0 30px white;
+}
+.sidenav a {
+  padding: 8px 8px 8px 42px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(0, 255, 255, 0.63);
+  text-shadow: 0 0 3px white;
+  display: block;
+  transition: 0.6s;
+}
+
+.sidenav a:hover {
+  transition: 0.3s;
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 35px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  color: rgba(255, 0, 0, 0.685);
+  text-shadow: 0 0 2px rgb(138, 45, 45);
+  height: 40px;
+  padding: 0;
+  border: none;
+  font-weight: bolder;
+  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.671), inset 0 0 20px white, 0 0 4px red;
+}
+.closebtn:hover {
+  background: rgba(255, 0, 0, 0.705);
+  color: white;
+  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.671), inset 0 0 20px rgba(255, 255, 255, 0.541), 0 0 8px rgb(255, 0, 0);
+}
 }
 
 
@@ -2593,6 +2650,74 @@ Wellness
 
   }
 
+
+
+  /* SideNav */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1006;
+  background: rgba(51, 51, 51, 0.671);
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+  border-top-right-radius: 30px;
+  border-left: groove 2px white;
+  border-top: groove 1px white;
+  box-shadow: inset 0 0 40px lightskyblue, 0 0 8px lightskyblue, 0 0 16px rgba(255, 255, 255, 0.795);
+}
+.sidenav:hover {
+  background: rgba(0, 0, 0, 0.822);
+  box-shadow: inset 0 0 30px white;
+}
+.sidenav p {
+  background: rgba(0, 0, 0, 0.788);
+  height: 40px;
+  margin-top: 5px;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 6px aqua;
+}
+.sidenav a {
+  padding: 8px 8px 8px 42px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(0, 255, 255, 0.63);
+  text-shadow: 0 0 3px white;
+  display: block;
+  transition: 0.6s;
+}
+
+.sidenav a:hover {
+  transition: 0.3s;
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 36px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  color: rgba(255, 0, 0, 0.685);
+  text-shadow: 0 0 2px rgb(138, 45, 45);
+  height: 40px;
+  padding: 0;
+  border: none;
+  font-weight: bolder;
+  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.671), inset 0 0 20px white, 0 0 4px red;
+  background: rgba(190, 112, 112, 0.705);
+}
+.closebtn:hover {
+  background: rgba(255, 0, 0, 0.705);
+  color: white;
+  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.671), inset 0 0 20px rgba(255, 255, 255, 0.541), 0 0 8px rgb(255, 0, 0);
+}
 /* Video Players */
   
 .overview-video {
@@ -2799,16 +2924,46 @@ h1 {
           <ul>
             <li><img class="message-button" src="/site/messages_2a.png" alt=""></li>
             <li><button id="spreadMenu">
-              <img class="spread-menu-button" src="/site/menu_1a.png" alt="">
-            </li>
+              <img class="spread-menu-button" src="/site/menu_1a.png" alt="" onclick="openNav()">
             </button>
+          </li>
           </ul>
         </div>
       </div>
-    
+      
+        <div id="SideSpread" class="sidenav">
+          <p>Menu</p>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/dashboard">Dashboard</a>
+          <a href="/academy">Academy</a>
+          <a href="/business">Business</a>
+          <a href="/shopping">Shopping</a>
+          <a href="/leisure">Leisure</a>
+          <a href="/events">Events</a>
+          <a href="/financial">Fincancial</a>
+          <a href="/celebration-life">Celebration of Life</a>
+          <a href="/wellness">Wellness</a>
+          <a href="/music">Music</a>
+          <a href="/socialspread">SocialSpread</a>
+          <a href="/spreadshield">SpreadShield</a>
+          <a href="/spreadshield-control">SpreadShield Control</a>
+          <a href="/flexfloor">FlexFloor</a>
+          <a href="/messaging">Messaging</a>
+          <a href="/artistspread">ArtistSpread</a>
+          <a href="/widespread-ar">WideSpread AR</a>
+        </div>
       <%- body %>
     </div>
 
+      <script>
+        function openNav() {
+            document.getElementById("SideSpread").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("SideSpread").style.width = "0px";
+}
+      </script>
 <!-- 
     <script src="/logic/map-logic_1.js"></script>
    -->

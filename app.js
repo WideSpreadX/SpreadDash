@@ -5,6 +5,14 @@ const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
+/* 
+File Uploading
+const crypto = require('crypto');
+const multer = require('multer');
+const GridFsStorage = require('multer-gridfs-storage');
+const Grid = require('gridfs-stream');
+const methodOverride = require('method-override');
+ */
 
 const app = express();
 // Passport Config
@@ -17,6 +25,7 @@ mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
+
 
 // EJS
 app.use(expressLayouts);
@@ -43,6 +52,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
+
+
 
 
 

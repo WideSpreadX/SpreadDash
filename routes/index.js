@@ -3,11 +3,13 @@ const router = express.Router();
 const { ensureAuthenticated } = require("../config/auth");
 const chalk = require("chalk");
 const log = console.log;
-/* const mongoose = require("mongoose");
+const mongoose = require("mongoose");
+/* 
 const axios = require("axios");
 const cheerio = require("cheerio");
 var logger = require("morgan");
 const classes = require("./classes"); */
+
 
 const User = require("../models/User");
 const COVIDmarker = require("../models/COVID");
@@ -27,8 +29,14 @@ require("./apiRoutes")(app);
 require("./academyRoutes")(app);
 
 
+/* Middleware */
+
 app.use(bodyParser.json());
+
 app.use(express.urlencoded({ extended: true }));
+
+// Init gfs
+
 
 // Welcome Page
 router.get("/", (req, res) => res.render("welcome"));
@@ -48,16 +56,47 @@ router.get("/messaging", ensureAuthenticated, (req, res) => {
 });
 
 
+
 /* 
 
-                    FlexFloor
+File Upload
+
+*/
+
+
+
+
+
+// Get upload form
+router.get("/file/upload", ensureAuthenticated, (req, res) => {
+  res.render("file-upload");
+  log(chalk.blueBright("Hello File Upload Page!"));
+});
+
+// Uploads File to DB
+/* app.post('/file/upload', upload.single('file'), (req, res) => {
+  res.json({file: req.file});
+}); */
+
+/* 
+
+Music
 
 */
 
 router.post("/music/add", ensureAuthenticated, (req, res) => {
   res.render("add-music")
   log(chalk.blue("Hello Add Music Home!"));
-})
+});
+
+
+
+
+/* 
+
+                    FlexFloor
+
+*/
 // FlexFloor Home
 router.get("/flexfloor", ensureAuthenticated, (req, res) => {
   res.render("flexfloor");

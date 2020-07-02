@@ -43,6 +43,21 @@
     </div>
   </div>
 </div>
+
+<form action="/music/add" method="POST">
+  <div class="spread-group">
+    <label for="name">File Name</label>
+    <input
+      type="file"
+      id="single"
+      name="single"
+      class="form-control"
+      placeholder="Select Songs"
+      value=""
+    />
+  </div>
+  <button type="submit">Upload</button>
+</form>
 <div id="musicStreamContainer">
   <div id="musicCollections">
     <ul>

@@ -50,6 +50,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
+app.use("/music", require("./routes/musicRoutes"));
 /* app.use("/academy", require("./routes/academyRoutes")); */
 app.use("/api", require("./routes/apiRoutes"));
 

@@ -54,6 +54,10 @@ router.get("/messaging", ensureAuthenticated, (req, res) => {
 
 */
 
+router.post("/music/add", ensureAuthenticated, (req, res) => {
+  res.render("add-music")
+  log(chalk.blue("Hello Add Music Home!"));
+})
 // FlexFloor Home
 router.get("/flexfloor", ensureAuthenticated, (req, res) => {
   res.render("flexfloor");
@@ -465,6 +469,11 @@ router.get("/shopping/clothing/men", ensureAuthenticated, (req, res) => {
 // Shopping - Clothing - Men - T-Shirts
 router.get("/shopping/clothing/men/t-shirts", ensureAuthenticated, (req, res) => {
   res.render("t-shirts")
+});
+
+// Shopping - Clothing - Men - Shorts
+router.get("/shopping/clothing/men/shorts", ensureAuthenticated, (req, res) => {
+  res.render("shorts-m")
 });
 
 // Shopping - Home Goods

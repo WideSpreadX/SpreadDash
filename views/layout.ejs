@@ -2016,15 +2016,27 @@ audio {
     list-style: none;
     line-height: 50px;
 }
+.spread-app {
 
+}
+.spread-app h3 {
+  color: white;
+  font-size: 32px;
+  margin-top: 30px;
+  font-family: 'Sulphur Point', sans-serif;
+}
 
+.main-editor {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
 .first {
-    background: rgba(255, 255, 255, 0.418);
-    width: 45vw;
+    background: rgba(255, 255, 255, 0.856);
+    width: 95vw;
+    margin-left: 2.5vw;
+    height: 200px;
     overflow-x: scroll;
     overflow-y: scroll;
-    height: 70vh;
-    max-height: 90vh;
     white-space: pre;
     box-shadow: 0 1px 1px rgb(22, 22, 22);
     outline: none;
@@ -2039,9 +2051,6 @@ audio {
     border-radius: 10px;
     border: solid 1px white;
     box-shadow: 0 0 10px white, inset 0 0 5px #000;
-    position: absolute;
-    left: 10vw;
-    bottom: 3vh;
 }
 
 .second {
@@ -2051,22 +2060,20 @@ audio {
     white-space: pre;
     box-shadow: 0 0 10px rgb(255, 255, 255), inset 0 0 10px black;
     border-radius: 10px;
-    width: 40vw;
-    height: 70vh;
-    position: fixed;
-    right: 20px;
-    bottom: 3vh;
     color: white;
+    width: 95vw;
+    margin-left: 2.5vw;
+    height: 200px;
+    margin-top: 20px;
 }
 .editor-button {
-  width: 100%;
   padding-top: 5px;
 }
 #code_btn {
   margin-left: 35%;
   width: 30%;
   height: 50px;
-  
+  font-family: 'Sulphur Point', sans-serif;
   line-height: 40px;
   background: rgba(39, 120, 226, 0.603);
   box-shadow: inset 0 0 20px white, inset 0 0 12px lightskyblue, 0 0 10px white, 0 0 4px lightskyblue;
@@ -2087,24 +2094,30 @@ audio {
 
 .code-editor-file-explorer-container {
   background: rgba(32, 32, 32, 0.493);
-  width: 8vw;
-  height: 70vh;
-  position: fixed;
-  left: -10px;
-  bottom: 3vh;
+  width: 100vw;
+  height: 100px;
   border: groove 2px lightskyblue;
   border-left: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-top: 20px;
   padding-left: 15px;
+  overflow-x: scroll;
+  overflow-y: hidden;
   box-shadow: inset 0 0 6px white, inset 0 0 3px lightskyblue, 0 0 5px white, 0 0 2px lightskyblue;
 }
+.code-editor-file-explorer {
+  width: 2000px;
+}
 .code-editor-file-explorer-container li {
-  padding: 4px;
-  font-weight: lighter;
   cursor: pointer;
   transition: ease-in 0.32s;
+  float: left;
+  width: fit-content;
+  padding: 8px;
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 22px;
+  list-style: none;
 }
 .code-editor-file-explorer-container li:hover {
   color:rgb(39, 167, 184);

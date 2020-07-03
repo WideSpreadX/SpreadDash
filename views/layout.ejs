@@ -2780,10 +2780,12 @@ Wellness
 .menu-scroller {
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-right: 28px;
   background: black;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 60vh;
+  width: fit-content;
   margin-left: 25px;
   border-radius: 20px 0 0 20px;
   box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.555), inset 0 0 40px black, 0 0 6px #ccc;
@@ -2808,11 +2810,75 @@ Wellness
   display: block;
   transition: 0.6s;
   font-family: 'Sulphur Point', sans-serif;
+  margin-left: 20px;
+  margin-top: 8px;
+  outline: none;
+  border-radius: 4px;
+  transition: ease-out 0.4s;
+  box-shadow: inset 0 0 8px black, 0 0 3px #888;
 }
+.zone-dashboard {
+  border-left: 10px solid lightskyblue;
+}
+.zone-dashboard:hover {
+  background: lightskyblue;
+}
+.zone-academy {
+  border-left: 10px solid gold;
+}
+.zone-academy:hover {
+  background: gold;
+  color: black;
+}
+.zone-business {
+  border-left: 10px solid rgba(172, 255, 47, 0.5);
+}
+.zone-business:hover {
+  background: greenyellow;
+}
+.zone-leisure {
+  border-left: 10px solid darkgreen;
+}
+.zone-leisure:hover {
+  background: darkgreen;
+}
+.zone-wellness {
+  border-left: 10px solid magenta;
+}
+.zone-wellness:hover {
+  background: magenta;
+}
+.zone-socialspread {
+  border-left: 10px solid aqua;
+}
+.zone-socialspread:hover {
+  background: aqua;
+}
+.zone-spreadshield {
+  border-left: 10px solid crimson;
+}
+.zone-spreadshield:hover {
+  background: crimson;
+}
+.zone-flexfloor {
+  border-left: 10px solid blue;
+}
+.zone-flexfloor:hover {
+  background: blue;
+}
+.zone-shopping {
+  border-left: 10px solid purple;
+}
+.zone-shopping:hover {
+  background: purple;
+}
+
 
 .sidenav a:hover {
   transition: 0.3s;
   color: #f1f1f1;
+  text-shadow: 0 0 6px black;
+  box-shadow: inset 0 0 8px black, inset 4px 0px 6px rgba(255, 255, 255, 0.76), 0 0 4px rgba(255, 255, 255, 0.678);
 }
 
 .sidenav .closebtn {
@@ -3056,20 +3122,20 @@ h1 {
           <p>Menu</p>
           <div class="menu-scroller">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="/dashboard">Dashboard</a>
-          <a href="/academy">Academy</a>
-          <a href="/business">Business</a>
-          <a href="/shopping">Shopping</a>
-          <a href="/leisure">Leisure</a>
+          <a class="zone-dashboard" href="/dashboard">Dashboard</a>
+          <a class="zone-academy" href="/academy">Academy</a>
+          <a class="zone-business" href="/business">Business</a>
+          <a class="zone-shopping" href="/shopping">Shopping</a>
+          <a class="zone-leisure" href="/leisure">Leisure</a>
           <a href="/events">Events</a>
-          <a href="/financial">Fincancial</a>
+          <a class="zone-financial" href="/financial">Fincancial</a>
           <a href="/celebration-life">Celebration</a>
-          <a href="/wellness">Wellness</a>
+          <a class="zone-wellness" href="/wellness">Wellness</a>
           <a href="/music">Music</a>
-          <a href="/socialspread">SocialSpread</a>
-          <a href="/spreadshield">SpreadShield</a>
-          <a href="/spreadshield-control">SpreadShield Control</a>
-          <a href="/flexfloor">FlexFloor</a>
+          <a class="zone-socialspread" href="/socialspread">SocialSpread</a>
+          <a class="zone-spreadshield" href="/spreadshield">SpreadShield</a>
+          <a class="zone-spreadshield" href="/spreadshield-control">SpreadShield Control</a>
+          <a class="zone-flexfloor" href="/flexfloor">FlexFloor</a>
           <a href="/messaging">Messaging</a>
           <a href="/artistspread">ArtistSpread</a>
           <a href="/widespread-ar">WideSpread AR</a>
@@ -3080,7 +3146,7 @@ h1 {
 
       <script>
         function openNav() {
-            document.getElementById("SideSpread").style.width = "250px";
+            document.getElementById("SideSpread").style.width = "275px";
 }
 
 function closeNav() {

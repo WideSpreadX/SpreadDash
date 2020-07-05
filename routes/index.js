@@ -548,6 +548,24 @@ router.get("/leisure", ensureAuthenticated, (req, res) => {
   res.render("leisure")
 });
 
+/* Demolition Ranch */
+
+// Leisure - Games
+router.get("/leisure/games", ensureAuthenticated, (req, res) => {
+  res.render("games")
+});
+
+// Leisure - Games - Demolition Ranch
+router.get("/leisure/games/demolition-ranch", ensureAuthenticated, (req, res) => {
+  res.render("demolition-ranch")
+});
+
+
+
+
+
+
+
 
 /* 
 

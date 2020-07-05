@@ -16,6 +16,9 @@
 <!-- Wellness/Medical -->
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
+<!-- Demolition Ranch -->
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
 
     <link
       rel="stylesheet"
@@ -59,6 +62,7 @@ font-family: 'Syncopate', sans-serif;
 font-family: 'Gruppo', cursive;
 font-family: 'Megrim', cursive;
 font-family: 'Bilbo Swash Caps', cursive;
+font-family: 'Staatliches', cursive;
 */
 
 
@@ -2762,26 +2766,28 @@ Wellness
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 30px;
+  padding-bottom: 50px;
   padding-bottom: 30px;
   border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
   border-left: groove 2px white;
   border-top: groove 1px white;
   box-shadow: inset 0 -20px 40px lightskyblue, 0 0 8px lightskyblue, 0 0 16px rgba(255, 255, 255, 0.795);
-  background: #444;
+  background: rgba(68, 68, 68, 0.562);
 }
 .sidenav:hover {
-  background: rgba(51, 116, 238, 0.918);
+  background: rgba(186, 188, 192, 0.918);
   color: black;
   text-shadow: 0 0 2px white;
   border-top: 1px groove lightskyblue;
   border-right: 2px groove lightskyblue;
-  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.514);
+  box-shadow: inset 0 0 40px rgba(49, 49, 49, 0.514);
 }
 .menu-scroller {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 28px;
-  background: black;
+  background: rgba(0, 0, 0, 0.788);
   overflow-y: scroll;
   overflow-x: hidden;
   height: 60vh;
@@ -2797,7 +2803,7 @@ Wellness
   font-size: 32px;
   text-align: center;
   margin-bottom: 20px;
-  box-shadow: inset 0 0 6px aqua;
+  box-shadow: inset 0 0 6px aqua, 0 0 10px white;
   font-family: 'Sulphur Point', sans-serif;
   color: white;
 }
@@ -2891,13 +2897,13 @@ Wellness
   text-align: center;
   width: 50px;
   color: rgba(255, 0, 0, 0.685);
-  text-shadow: 0 0 2px rgb(138, 45, 45);
+  text-shadow: 0 0 4px rgb(223, 201, 201);
   height: 50px;
   padding: 0;
   border: none;
   font-weight: bolder;
-  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.671), inset 0 0 20px white, 0 0 4px red;
-  background: rgba(190, 112, 112, 0.705);
+  box-shadow: 0 0 5px red, 0 0 10px white, inset 0 0 5px red;
+  background: rgba(0, 0, 0, 0.705);
 }
 .closebtn:hover {
   background: rgba(255, 0, 0, 0.705);
@@ -3090,8 +3096,128 @@ h1 {
 }
 
 
+.breadcrumbs-container {
+  background: #111;
+  text-align: left;
+  padding: 4px;
+  font-family: 'Sulphur Point', sans-serif;
+}
+.breadcrumbs-container a {
+  color: white;
+  font-size: 24px;
+  padding-left: 5px;
+  border-right: solid 1px rgba(255, 255, 255, 0.788);
+  padding-right: 10px;
+}
+.games-list {
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Sulphur Point', sans-serif;
+}
+.game-list-item-backdrop {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.game-list-item-backdrop img {
+  opacity: 0.6;
+  width: 100%;
+}
+.game-list-item-data {
+  color: lime;
+}
+.games-list p {
+  width: 85%;
+  display: inline-block;
+  color: white;
+}
+.games-list a {
+  display: block;
+  font-size: 32px;
+  padding: 5px;
+  box-shadow: 0 0 3px white;
+  margin-top: 8px;
+  width: 90%;
+  height: 200px;
+  display: inline-block;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.games-list a:last-of-type {
+  border: none;
+}
+.games-list table {
+  margin-top: 10px;
+  width: 100%;
+}
+.games-list td {
+  font-size: 16px;
+  width: 20%;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+  color: #888;
+}
+.games-list td:first-of-type {
+  border-left: none;
+}
+.games-list td:last-of-type {
+  border-right: none;
+}
+.go {
+  height: 50px;
+  line-height: 50px;
+  width: 10%;
+  display: inline-block;
+  color: lime;
+  text-shadow: 0 0 20px lime;
+  
+}
 
+.game-header {
+}
+.game-header h1 {
+  color: rgba(0, 0, 0, 0.692);
+  text-shadow: 0 0 12px rgba(255, 166, 0, 0.692);
+  font-weight: bolder;
+  font-family: 'Staatliches', cursive;
+  font-size: 60px;
+}
+.game-header h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 5px;
+  font-family: 'Sulphur Point', sans-serif;
+  color: #555;
+  text-shadow: 0 0 2px white;
+}
+.game-container {
+  height: 80vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 
+}
+.game-menu-music-container {
+  background: orangered;
+  padding: 10px;
+  display: none;
+}
+
+.game-background {
+  background: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -50;
+}
+
+.game-background img {
+  height: fit-content;
+  width: 100%;
+}
 
 }
     </style>

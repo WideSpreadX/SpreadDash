@@ -461,6 +461,12 @@ router.get("/shopping/cart", ensureAuthenticated, (req, res) => {
 });
 
 
+// Shopping - Cart - Checkout
+router.get("/shopping/cart/checkout", ensureAuthenticated, (req, res) => {
+  res.render("checkout")
+});
+
+
 
 // Get All Products
 router.get('/shopping/all-products', function(req, res, next) {

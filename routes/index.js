@@ -606,8 +606,14 @@ router.get("/wellness/yoga/instructors", ensureAuthenticated, (req, res) => {
 });
 
 
-// Yoga - Instructors - Clarice Wilson
-router.get("/wellness/yoga/instructors/clarice-wilson", ensureAuthenticated, (req, res) => {
+// Yoga - Instructors - Purnama
+router.get("/wellness/yoga/instructors/purnama", ensureAuthenticated, (req, res) => {
+  res.render("yoga-purnama")
+});
+
+
+// Yoga - Instructors - Purnama - Clarice Wilson
+router.get("/wellness/yoga/instructors/purnama/clarice-wilson", ensureAuthenticated, (req, res) => {
   res.render("yoga-clariceWilson")
 });
 

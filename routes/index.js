@@ -455,6 +455,12 @@ router.get("/business", ensureAuthenticated, (req, res) => {
 */
 
 
+// Shopping - Cart
+router.get("/shopping/cart", ensureAuthenticated, (req, res) => {
+  res.render("cart")
+});
+
+
 
 // Get All Products
 router.get('/shopping/all-products', function(req, res, next) {

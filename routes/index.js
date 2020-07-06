@@ -612,6 +612,36 @@ router.get("/wellness/yoga/instructors/purnama", ensureAuthenticated, (req, res)
 });
 
 
+// Yoga - Instructors - Purnama - About Us
+router.get("/wellness/yoga/instructors/purnama/about-us", ensureAuthenticated, (req, res) => {
+  res.render("yoga-purnama-about-us")
+});
+
+
+// Yoga - Instructors - Purnama - Mission Statement
+router.get("/wellness/yoga/instructors/purnama/mission-statement", ensureAuthenticated, (req, res) => {
+  res.render("yoga-purnama-mission-statement")
+});
+
+
+// Yoga - Instructors - Purnama - Classes
+router.get("/wellness/yoga/instructors/purnama/classes", ensureAuthenticated, (req, res) => {
+  res.render("yoga-purnama-classes")
+});
+
+
+// Yoga - Instructors - Purnama - Schedule
+router.get("/wellness/yoga/instructors/purnama/schedule", ensureAuthenticated, (req, res) => {
+  res.render("yoga-purnama-schedule")
+});
+
+
+// Yoga - Instructors - Purnama - Live
+router.get("/wellness/yoga/instructors/purnama/live", ensureAuthenticated, (req, res) => {
+  res.render("yoga-purnama-live")
+});
+
+
 // Yoga - Instructors - Purnama - Clarice Wilson
 router.get("/wellness/yoga/instructors/purnama/clarice-wilson", ensureAuthenticated, (req, res) => {
   res.render("yoga-clariceWilson")
@@ -621,6 +651,16 @@ router.get("/wellness/yoga/instructors/purnama/clarice-wilson", ensureAuthentica
 // Yoga - Classroom
 router.get("/wellness/yoga/classroom", ensureAuthenticated, (req, res) => {
   res.render("yoga-classroom")
+});
+
+
+/*
+                                    Fitness
+*/
+
+// Fitness
+router.get("/wellness/fitness", ensureAuthenticated, (req, res) => {
+  res.render("fitness")
 });
 
 

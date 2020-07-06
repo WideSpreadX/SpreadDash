@@ -3033,6 +3033,31 @@ Wellness
   color: white;
   box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.671), inset 0 0 20px rgba(255, 255, 255, 0.541), 0 0 8px rgb(255, 0, 0);
 }
+
+.device-list {
+  text-align: center;
+  margin-top: 20px;
+}
+.device-list li {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px lightskyblue, 0 0 4px white;
+}
+.device-list a {
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+
+}
+.device-list img {
+  border-radius: 50%;
+  padding-top: 10px;
+  width: 40px;
+  height: 40px;
+
+}
 /* Video Players */
   
 .overview-video {
@@ -3388,6 +3413,14 @@ h1 {
           <a href="/messaging">Messaging</a>
           <a href="/artistspread">ArtistSpread</a>
           <a href="/widespread-ar">WideSpread AR</a>
+          </div>
+          <div class="device-list">
+            <ul>
+              <li><a href=""><img src="/system/main-icon/phone_1a1a1a.png" alt=""></a></li>
+              <li><a href=""><img src="/system/main-icon/wifi-connected_1a1a1a.png" alt=""></a></li>
+              <li><a href=""><img src="/system/main-icon/contacts-list_1a1a1a.png" alt=""></a></li>
+              <li><a href="/media/camera-1"><img src="/system/main-icon/camera-lens_1a1a1a.png" alt=""></a></li>
+            </ul>
           </div>
         </div>
       <%- body %>

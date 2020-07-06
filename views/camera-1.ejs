@@ -1,0 +1,14 @@
+<h1>Camera 1</h1>
+
+<video id="camera-1" autoplay></video>
+
+<script>
+    navigator.mediaDevices.getUserMedia({
+        video: {
+            width: 500,
+            height: 1000
+        }
+    }).then(stream => {
+        document.getElementById('camera-1').srcObject = stream;
+    })
+</script>

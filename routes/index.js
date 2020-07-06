@@ -57,6 +57,28 @@ router.get("/messaging", ensureAuthenticated, (req, res) => {
 
 
 
+
+/* 
+
+Camera Pages
+
+*/
+
+// Media Page
+router.get("/media", ensureAuthenticated, (req, res) => {
+  res.render("media.ejs");
+  log(chalk.red("Hello Media Home!"));
+});
+
+
+// Media Page - Camera 1
+router.get("/media/camera-1", ensureAuthenticated, (req, res) => {
+  res.render("camera-1.ejs");
+  log(chalk.blue("Hello Camera 1!"));
+});
+
+
+
 /* 
 
 File Upload

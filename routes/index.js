@@ -60,6 +60,19 @@ router.get("/messaging", ensureAuthenticated, (req, res) => {
 
 /* 
 
+Contacts Pages
+
+*/
+
+// Contact Page
+router.get("/user/contacts", ensureAuthenticated, (req, res) => {
+  res.render("contacts-list.ejs");
+  log(chalk.red("Hello Contacts Home!"));
+});
+
+
+/* 
+
 Camera Pages
 
 */
@@ -126,11 +139,92 @@ router.get("/flexfloor", ensureAuthenticated, (req, res) => {
 });
 
 
+
+/* 
+
+
+
+                  Celebrations
+
+
+
+                  */
+                 
+// Celebrations - Home
+router.get("/celebrations", ensureAuthenticated, (req, res) => {
+  res.render("celebrations");
+  log(chalk.blue("Hello Celebration of Life - Home!"));
+});
+
+                 
+// Celebrations - Holidays
+router.get("/celebrations/holidays", ensureAuthenticated, (req, res) => {
+  res.render("celebrations-holidays");
+  log(chalk.blue("Hello Birthday Home!"));
+});
+
+
+                 
+// Celebrations - Birthday
+router.get("/celebrations/birthday", ensureAuthenticated, (req, res) => {
+  res.render("celebrations-birthday");
+  log(chalk.blue("Hello Birthday Home!"));
+});
+
+
+                 
+// Celebrations - Prom
+router.get("/celebrations/prom", ensureAuthenticated, (req, res) => {
+  res.render("celebrations-prom");
+  log(chalk.blue("Hello Prom Home!"));
+});
+
+
+                 
+// Celebrations - Graduation
+router.get("/celebrations/graduation", ensureAuthenticated, (req, res) => {
+  res.render("celebrations-graduation");
+  log(chalk.blue("Hello Graduation Home!"));
+});
+
+
+                 
+// Celebrations - Wedding
+router.get("/celebrations/wedding", ensureAuthenticated, (req, res) => {
+  res.render("celebrations-wedding");
+  log(chalk.blue("Hello Wedding Home!"));
+});
+
+
+                 
+// Celebrations - Anniversary
+router.get("/celebrations/anniversary", ensureAuthenticated, (req, res) => {
+  res.render("celebrations-anniversary");
+  log(chalk.blue("Hello Anniversary Home!"));
+});
+
+
+                 
+// Celebrations - Newborn
+router.get("/celebrations/newborn", ensureAuthenticated, (req, res) => {
+  res.render("celebrations-newborn");
+  log(chalk.blue("Hello Newborn Home!"));
+});
+
+
+// Celebrations - Celebration of Life - Home
+router.get("/celebrations/celebration-life", ensureAuthenticated, (req, res) => {
+  res.render("celebrations-celebration-life");
+  log(chalk.blue("Hello Celebration of Life Home!"));
+});
+
+
+
 /* 
       Celebration of Life
 */
 
-// Celebration of Life - Home
+// Celebration of Life - Dave
 router.get("/celebration-life", ensureAuthenticated, (req, res) => {
   res.render("celebration-life");
   log(chalk.blue("Hello Celebration of Life - Home!"));

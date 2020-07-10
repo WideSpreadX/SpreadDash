@@ -613,6 +613,11 @@ router.get("/shopping/real-estate", ensureAuthenticated, (req, res) => {
   res.render("real-estate")
 });
 
+// Shopping - Automotive
+router.get("/shopping/automotive", ensureAuthenticated, (req, res) => {
+  res.render("automotive")
+});
+
 // Shopping - Clothing
 router.get("/shopping/clothing", ensureAuthenticated, (req, res) => {
   res.render("clothing")
@@ -898,6 +903,19 @@ router.get("/news", ensureAuthenticated, (req, res) => {
 // SpreadSpace
 router.get("/spreadspace", ensureAuthenticated, (req, res) => {
   res.render("spreadspace")
+});
+
+
+/* 
+
+          Aether
+
+*/
+
+
+// SpreadSpace
+router.get("/aether", ensureAuthenticated, (req, res) => {
+  res.render("aether")
 });
 
 

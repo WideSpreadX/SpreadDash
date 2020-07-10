@@ -75,11 +75,23 @@ font-family: 'Shadows Into Light', cursive;
 
 
 
+@media only screen and (min-width: 3000px) {
+  .widespread-container {
+
+  }
+  .background-image-container {
+    text-align: center;
+  }
+
+}
 @media only screen and (min-width: 600px) {
 
 
   h1 {
     font-family: 'Sulphur Point', sans-serif;
+  }
+
+  .background-image-container {
   }
 .spread-menu {
   height: 100px;
@@ -1612,6 +1624,49 @@ label {
       /* 
       
       
+              Contacts Pages
+      
+      
+      
+       */
+      .contact {
+        background: lime;
+      }
+
+
+
+      .contact a {
+        display: inline-block;
+        background: purple;
+      }
+      .contact-list-image {
+        background: red;
+        width: 20%;
+        display: inline-block;
+      }
+
+      .contact-list-image img {
+        max-width: 40px;
+
+      }
+
+
+      .contact-name {
+        background: orange;
+        width: 40%;
+        display: inline-block;
+      }
+      .contact-name p {
+        font-size: 36px;
+      }
+      .contact-options {
+        background: blue;
+        width: 20%;
+        display: inline-block;
+      }
+      /* 
+      
+      
                 Zone Portal
       
       
@@ -2987,7 +3042,20 @@ Wellness
 
   }
 
+/* Background Container */
 
+.background-image-container {
+    padding: 20px;
+  }
+.background-image-container img {
+  width: 100%;
+}
+.background-image-widespread-mist {
+  position: absolute;
+  opacity: 0.3;
+}
+.background-image-widespread-logo {
+}
 
   /* SideNav */
 .sidenav {
@@ -3512,7 +3580,7 @@ h1 {
           <a class="zone-business" href="/business">Business</a>
           <a class="zone-shopping" href="/shopping">Shopping</a>
           <a class="zone-leisure" href="/leisure">Leisure</a>
-          <a href="/events">Events</a>
+          <a href="/event">Events</a>
           <a class="zone-financial" href="/financial">Fincancial</a>
           <a href="/celebration-life">Celebration</a>
           <a class="zone-wellness" href="/wellness">Wellness</a>

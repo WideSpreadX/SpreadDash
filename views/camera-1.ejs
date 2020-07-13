@@ -5,8 +5,8 @@
 <script>
     navigator.mediaDevices.getUserMedia({
         video: {
-            width: 500,
-            height: 1000
+            width: 400,
+            height: 800
         }
     }).then(stream => {
         document.getElementById('camera-1').srcObject = stream;

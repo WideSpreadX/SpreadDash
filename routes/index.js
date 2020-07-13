@@ -51,7 +51,7 @@ router.get("/", (req, res) => res.render("welcome"));
 
 // Messaging Page
 router.get("/messaging", ensureAuthenticated, (req, res) => {
-  res.render("messages.ejs");
+  res.render("messages");
   log(chalk.blue("Hello Messages Home!"));
 });
 
@@ -66,20 +66,20 @@ Contacts Pages
 
 // Contact Page
 router.get("/user/contacts", ensureAuthenticated, (req, res) => {
-  res.render("contacts-list.ejs");
+  res.render("contacts-list");
   log(chalk.red("Hello Contacts Home!"));
 });
 
 // Personal Spread Page
 router.get("/user/profile", ensureAuthenticated, (req, res) => {
-  res.render("user-profile-page.ejs");
+  res.render("user-profile-page");
   log(chalk.red("Hello Profile Home!"));
 });
 
 
 // Personal Spread Page - Jonny O
 router.get("/user/profile/jonny-o", ensureAuthenticated, (req, res) => {
-  res.render("user-profile-page-jonny-o.ejs");
+  res.render("user-profile-page-jonny-o");
   log(chalk.red("Hello Jonny O Profile Home!"));
 });
 
@@ -88,7 +88,7 @@ router.get("/user/profile/jonny-o", ensureAuthenticated, (req, res) => {
 
 // Personal Spread Page - Trell
 router.get("/user/profile/trell", ensureAuthenticated, (req, res) => {
-  res.render("user-profile-page-trell.ejs");
+  res.render("user-profile-page-trell");
   log(chalk.red("Hello Trell Profile Home!"));
 });
 
@@ -96,8 +96,14 @@ router.get("/user/profile/trell", ensureAuthenticated, (req, res) => {
 
 // Personal Spread Page - Hope
 router.get("/user/profile/hope", ensureAuthenticated, (req, res) => {
-  res.render("user-profile-page-hope.ejs");
+  res.render("user-profile-page-hope");
   log(chalk.red("Hello Hope Profile Home!"));
+});
+
+// Personal Spread Page - Pheonix
+router.get("/user/profile/pheonix", ensureAuthenticated, (req, res) => {
+  res.render("user-profile-page-pheonix");
+  log(chalk.red("Hello Pheonix Profile Home!"));
 });
 
 
@@ -109,14 +115,14 @@ Camera Pages
 
 // Media Page
 router.get("/media", ensureAuthenticated, (req, res) => {
-  res.render("media.ejs");
+  res.render("media");
   log(chalk.red("Hello Media Home!"));
 });
 
 
 // Media Page - Camera 1
 router.get("/media/camera-1", ensureAuthenticated, (req, res) => {
-  res.render("camera-1.ejs");
+  res.render("camera-1");
   log(chalk.blue("Hello Camera 1!"));
 });
 
@@ -393,6 +399,30 @@ router.get("/help", ensureAuthenticated, (req, res) => {
 // SpreadShield
 router.get("/spreadshield", ensureAuthenticated, (req, res) => {
   res.render("spreadshield")
+});
+// SpreadShield - Garage
+router.get("/spreadshield/garage", ensureAuthenticated, (req, res) => {
+  res.render("spreadshield-garage")
+});
+// SpreadShield - Levels
+router.get("/spreadshield/levels", ensureAuthenticated, (req, res) => {
+  res.render("spreadshield-levels")
+});
+// SpreadShield - Comfort
+router.get("/spreadshield/comfort", ensureAuthenticated, (req, res) => {
+  res.render("spreadshield-comfort")
+});
+// SpreadShield - GPS
+router.get("/spreadshield/gps", ensureAuthenticated, (req, res) => {
+  res.render("spreadshield-gps")
+});
+// SpreadShield - Settings
+router.get("/spreadshield/settings", ensureAuthenticated, (req, res) => {
+  res.render("spreadshield-settings")
+});
+// SpreadShield - Schedule 
+router.get("/spreadshield/schedule", ensureAuthenticated, (req, res) => {
+  res.render("spreadshield-schedule")
 });
 // SpreadShield Contol
 router.get("/spreadshield-control", ensureAuthenticated, (req, res) => {

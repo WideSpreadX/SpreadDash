@@ -70,6 +70,19 @@ router.get("/user/contacts", ensureAuthenticated, (req, res) => {
   log(chalk.red("Hello Contacts Home!"));
 });
 
+// Personal Spread Page
+router.get("/user/profile", ensureAuthenticated, (req, res) => {
+  res.render("user-profile-page.ejs");
+  log(chalk.red("Hello Profile Home!"));
+});
+
+
+// Personal Spread Page - Trell
+router.get("/user/profile/trell", ensureAuthenticated, (req, res) => {
+  res.render("user-profile-page-trell.ejs");
+  log(chalk.red("Hello Trell Profile Home!"));
+});
+
 
 /* 
 

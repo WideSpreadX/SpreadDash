@@ -3051,6 +3051,10 @@ Wellness
 /* Background Container */
 
 .background-image-container {
+    position: fixed;
+    top: 25%;
+    z-index: -9000;
+    left: 0;
     padding: 20px;
   }
 .background-image-container img {
@@ -3749,6 +3753,10 @@ h1 {
   text-align: center;
   color: white;
 }
+.user-profile {
+  background: lime;
+}
+
 }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
@@ -3772,7 +3780,15 @@ h1 {
           </ul>
         </div>
       </div>
-      
+      <div class="background-image-container">
+        <div class="background-image-widespread-mist">
+          <img src="/site/widespread-logo_backdrop.png" alt="WideSpread Mist">
+        </div>
+        <div class="background-image-widespread-logo">
+          <img src="/site/widespread_logo_1d.png" alt="WideSpread Logo">
+        </div>
+      </div>
+    
         <div id="SideSpread" class="sidenav">
           
           <p>Menu</p>

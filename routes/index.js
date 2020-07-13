@@ -77,10 +77,27 @@ router.get("/user/profile", ensureAuthenticated, (req, res) => {
 });
 
 
+// Personal Spread Page - Jonny O
+router.get("/user/profile/jonny-o", ensureAuthenticated, (req, res) => {
+  res.render("user-profile-page-jonny-o.ejs");
+  log(chalk.red("Hello Jonny O Profile Home!"));
+});
+
+
+
+
 // Personal Spread Page - Trell
 router.get("/user/profile/trell", ensureAuthenticated, (req, res) => {
   res.render("user-profile-page-trell.ejs");
   log(chalk.red("Hello Trell Profile Home!"));
+});
+
+
+
+// Personal Spread Page - Hope
+router.get("/user/profile/hope", ensureAuthenticated, (req, res) => {
+  res.render("user-profile-page-hope.ejs");
+  log(chalk.red("Hello Hope Profile Home!"));
 });
 
 

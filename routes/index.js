@@ -125,6 +125,13 @@ router.post("/music/add", ensureAuthenticated, (req, res) => {
 });
 
 
+// Music - Trell
+router.get("/music/trell", ensureAuthenticated, (req, res) => {
+  res.render("music-trell")
+  log(chalk.greenBright("Trell!"));
+});
+
+
 
 
 /* 
